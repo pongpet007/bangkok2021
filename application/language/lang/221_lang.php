@@ -11,6 +11,7 @@ $lang["contact-us"] = 'ติดต่อเรา';
 $lang["product-service"] = 'สินค้าและบริการ';
 $lang["promotion"] = 'โปรโมชั่น';
 $lang["article-knowledge"] = 'บทความ/เกร็ดความรู้';
+$lang["article and knowledge"] = 'บทความ และ เกร็ดความรู้';
 $lang["news-activities"] = 'ข่าวสาร/กิจกรรม';
 $lang["contact-us"] = 'ติดต่อเรา';
 $lang["join-with-us"] = 'ร่วมงานกับเรา';
@@ -49,6 +50,7 @@ $lang["overall"] = 'รวมทั้งหมด';
 $lang["bath"] = 'บาท';
 $lang["back-to-products"] = 'กลับไปหน้าสินค้า';
 $lang["download-catalogue"] = 'ดาวน์โหลดแคตตาล็อก';
+$lang["interest-blog"] = 'บทความน่าสนใจ';
 
 
 ?>

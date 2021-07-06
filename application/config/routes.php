@@ -235,6 +235,8 @@ $route['(LA|la)\/Promotion\/detail\/(\d+)'] = 'Promotion/detail/$1/$2';
 $route['(MM|mm)\/Promotion\/detail\/(\d+)'] = 'Promotion/detail/$1/$2';
 $route['(VN|vn)\/Promotion\/detail\/(\d+)'] = 'Promotion/detail/$1/$2';
 
+
+
 $route['(TH|th)\/Catalogue'] = 'Catalogue/index/$1';
 $route['(US|us)\/Catalogue'] = 'Catalogue/index/$1';
 $route['(KH|kh)\/Catalogue'] = 'Catalogue/index/$1';
@@ -248,6 +250,23 @@ $route['(KH|kh)\/Catalogue\/detail\/(\d+)'] = 'Catalogue/detail/$1/$2';
 $route['(LA|la)\/Catalogue\/detail\/(\d+)'] = 'Catalogue/detail/$1/$2';
 $route['(MM|mm)\/Catalogue\/detail\/(\d+)'] = 'Catalogue/detail/$1/$2';
 $route['(VN|vn)\/Catalogue\/detail\/(\d+)'] = 'Catalogue/detail/$1/$2';
+
+// Achievements
+
+$route['(TH|th)\/Achievements'] = 'Achievements/index/$1';
+$route['(US|us)\/Achievements'] = 'Achievements/index/$1';
+$route['(KH|kh)\/Achievements'] = 'Achievements/index/$1';
+$route['(LA|la)\/Achievements'] = 'Achievements/index/$1';
+$route['(MM|mm)\/Achievements'] = 'Achievements/index/$1';
+$route['(VN|vn)\/Achievements'] = 'Achievements/index/$1';
+
+$route['(TH|th)\/Achievements\/detail\/(\d+)'] = 'Achievements/detail/$1/$2';
+$route['(US|us)\/Achievements\/detail\/(\d+)'] = 'Achievements/detail/$1/$2';
+$route['(KH|kh)\/Achievements\/detail\/(\d+)'] = 'Achievements/detail/$1/$2';
+$route['(LA|la)\/Achievements\/detail\/(\d+)'] = 'Achievements/detail/$1/$2';
+$route['(MM|mm)\/Achievements\/detail\/(\d+)'] = 'Achievements/detail/$1/$2';
+$route['(VN|vn)\/Achievements\/detail\/(\d+)'] = 'Achievements/detail/$1/$2';
+
 
 
 

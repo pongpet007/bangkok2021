@@ -43,7 +43,7 @@
 								<?=lang("Articles and Activities")?>
 							</a>
 							<div class="dropdown-content-article">
-								<a href="#" class="menu">
+								<a href="<?=base_url($this->session->userdata('site_lang_name'))?>/Blog" class="menu">
 									<?=lang("article-knowledge")?>
 								</a>
 								<a href="#" class="menu">
@@ -52,8 +52,8 @@
 							</div>
 						</div>
 					</li>
-					<li>
-						<a href="#">
+					<li> 
+						<a href="<?=base_url($this->session->userdata("site_lang_name")."/Achievements")?>">
 							<?=lang("achievements")?>
 						</a>
 					</li>

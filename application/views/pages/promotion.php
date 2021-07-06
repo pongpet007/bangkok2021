@@ -18,7 +18,7 @@
 		?>
 	</section>
 	<section class="content-about-us">
-		<div class="header-about" style="">
+		<div class="header-all" style="">
 			<div class="title-about">
 				<?=lang('promotion')?>
 			</div>

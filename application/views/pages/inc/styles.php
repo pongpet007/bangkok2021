@@ -397,7 +397,17 @@ footer {
 	margin: 10px 0;
 }
 .header-about {
-	background-image: url("../images/bg/about.png");
+	background-image: url("<?=base_url()?>images/bg/about.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	text-align: center;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+}
+.header-all {
+	background-image: url("<?=base_url()?>images/bg/all.png");
 	background-size: cover;
 	background-repeat: no-repeat;
 	text-align: center;
@@ -931,6 +941,11 @@ p {
 }
 .space-catalogue h4 {
 	margin: 10px 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
 }
 .download-catalogue {
 	padding: 10px 0;
@@ -943,9 +958,83 @@ p {
 	color: #000;
 	padding-right: 10px;
 }
+.title-name-page {
+	font-size: 36px;
+	color: #080A14;
+	margin: 10px 0;
+}
 
+.space-achievements {
+	margin: 20px 0;
+}
+.space-achievements img {
+	width: 100%;
+}
+.space-achievements a {
+	margin: 20px 0;
+	font-size: 18px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	text-decoration: none;
+	font-weight: 400;
+	color: #080A14;
+}
+.space-achievements a:hover {
+	color: #080A14;
+}
+.detail-achievements {
+	margin: 30px 0;
+}
+.detail-achievements p {
+	font-size: 24px;
+	color: #080A14;
+}
+.title-blog-all {
+	font-size: 28px;
+	color: #080A14;
+	font-weight: 400;
+}
+.detail-blog-all {
+	margin: 50px 0;
+}
+.detail-blog-all p {
+	font-size: 18px;
+	color: #080A14;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
 
-
+}
+.btn-goto-blog {
+	background-color: #80090F;
+	padding: 10px 30px;
+	color: #FFF;
+}
+.btn-goto-blog:hover {
+	color: #FFF;
+}
+.space-blog {
+	margin: 30px 0;
+}
+.space-blog-detail {
+	width: 100%;
+	display: inline-flex;
+	margin: 20px 0;
+}
+.title-name-blog {
+	font-size: 28px;
+	font-weight: 400;
+	width: 50%;
+}
+.share-blog {
+	text-align: right;
+	width: 50%;
+}
 
 
 

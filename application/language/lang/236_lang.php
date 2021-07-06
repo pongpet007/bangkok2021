@@ -10,6 +10,7 @@ $lang["contact-us"] = 'Contact Us';
 $lang["product-service"] = 'Products and Services';
 $lang["promotion"] = 'Promotion';
 $lang["article-knowledge"] = 'Article/Knowledge';
+$lang["article and knowledge"] = 'Article and Knowledge';
 $lang["news-activities"] = 'News/Activities';
 $lang["contact-us"] = 'contact us';
 $lang["join-with-us"] = 'work with us';
@@ -48,6 +49,7 @@ $lang["overall"] = 'overall';
 $lang["bath"] = 'bath';
 $lang["back-to-products"] = 'Back to products';
 $lang["download-catalogue"] = 'download catalogue';
+$lang["interest-blog"] = 'Interesting article';
 
 
 

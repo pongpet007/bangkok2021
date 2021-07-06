@@ -18,7 +18,7 @@
 		?>
 	</section>
 	<section class="content-about-us">
-		<div class="header-about" style="">
+		<div class="header-all" style="">
 			<div class="title-about">
 				<?=lang('catalogue')?>
 			</div>
@@ -83,7 +83,7 @@
 								<a href="#">
 									<?=lang("download-catalogue")?>
 								</a>
-							</span>#80090F
+							</span>
 						</div>
 					</div>
 					<div class="col-lg-3 col-md-3 col-sm-3 col-6">

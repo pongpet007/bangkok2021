@@ -104,13 +104,13 @@
 									<?=lang("share")?>
 								</span>
 								<a href="#" class="btn btn-share">
-									<img src="<?=base_url()?>images/icon/line-button.png">
+									<img src="<?=base_url()?>images/icon/line-button.png" class="img-width-100">
 								</a>
 								<a href="#" class="btn btn-share">
-									<img src="<?=base_url()?>images/icon/facebook-button.png">
+									<img src="<?=base_url()?>images/icon/facebook-button.png" class="img-width-100">
 								</a>
 								<a href="#" class="btn btn-share">
-									<img src="<?=base_url()?>images/icon/twitter-button.png">
+									<img src="<?=base_url()?>images/icon/twitter-button.png" class="img-width-100">
 								</a>
 							</div>
 						</div>
