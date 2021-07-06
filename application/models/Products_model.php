@@ -314,7 +314,7 @@ class Products_model extends CI_Model{
 
 	}
 
-	public function getRelateProduct($search = array(),$pro_id)
+	public function getRelateProduct($search = array(),$pro_id='0')
 	{
 
 		$this->db->select('products.*,products_language.*');

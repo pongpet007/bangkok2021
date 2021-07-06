@@ -221,6 +221,37 @@ $route['(VN|vn)\/Products\/index\/(\d+)\/(\d+)'] = 'Products/index/$1/$2/$3';
 
 
 
+$route['(TH|th)\/Promotion'] = 'Promotion/index/$1';
+$route['(US|us)\/Promotion'] = 'Promotion/index/$1';
+$route['(KH|kh)\/Promotion'] = 'Promotion/index/$1';
+$route['(LA|la)\/Promotion'] = 'Promotion/index/$1';
+$route['(MM|mm)\/Promotion'] = 'Promotion/index/$1';
+$route['(VN|vn)\/Promotion'] = 'Promotion/index/$1';
+
+$route['(TH|th)\/Promotion\/detail\/(\d+)'] = 'Promotion/detail/$1/$2';
+$route['(US|us)\/Promotion\/detail\/(\d+)'] = 'Promotion/detail/$1/$2';
+$route['(KH|kh)\/Promotion\/detail\/(\d+)'] = 'Promotion/detail/$1/$2';
+$route['(LA|la)\/Promotion\/detail\/(\d+)'] = 'Promotion/detail/$1/$2';
+$route['(MM|mm)\/Promotion\/detail\/(\d+)'] = 'Promotion/detail/$1/$2';
+$route['(VN|vn)\/Promotion\/detail\/(\d+)'] = 'Promotion/detail/$1/$2';
+
+$route['(TH|th)\/Catalogue'] = 'Catalogue/index/$1';
+$route['(US|us)\/Catalogue'] = 'Catalogue/index/$1';
+$route['(KH|kh)\/Catalogue'] = 'Catalogue/index/$1';
+$route['(LA|la)\/Catalogue'] = 'Catalogue/index/$1';
+$route['(MM|mm)\/Catalogue'] = 'Catalogue/index/$1';
+$route['(VN|vn)\/Catalogue'] = 'Catalogue/index/$1';
+
+$route['(TH|th)\/Catalogue\/detail\/(\d+)'] = 'Catalogue/detail/$1/$2';
+$route['(US|us)\/Catalogue\/detail\/(\d+)'] = 'Catalogue/detail/$1/$2';
+$route['(KH|kh)\/Catalogue\/detail\/(\d+)'] = 'Catalogue/detail/$1/$2';
+$route['(LA|la)\/Catalogue\/detail\/(\d+)'] = 'Catalogue/detail/$1/$2';
+$route['(MM|mm)\/Catalogue\/detail\/(\d+)'] = 'Catalogue/detail/$1/$2';
+$route['(VN|vn)\/Catalogue\/detail\/(\d+)'] = 'Catalogue/detail/$1/$2';
+
+
+
+
 
 $route['(TH|th)\/Products\/uset\/(\d+)'] = 'Products/uset/$1/$2';
 $route['(US|us)\/Products\/uset\/(\d+)'] = 'Products/uset/$1/$2';

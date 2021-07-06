@@ -45,5 +45,10 @@ $lang["shopping-cart"] = 'ตะกร้าสินค้า';
 $lang["total"] = 'ทั้งหมด';
 $lang["Summary of all items"] = 'สรุปรายการทั้งหมด';
 $lang["list"] = 'รายการ';
+$lang["overall"] = 'รวมทั้งหมด';
+$lang["bath"] = 'บาท';
+$lang["back-to-products"] = 'กลับไปหน้าสินค้า';
+$lang["download-catalogue"] = 'ดาวน์โหลดแคตตาล็อก';
+
 
 ?>

@@ -16,11 +16,11 @@ header {
 	list-style: none;
 	flex-direction: : row;
 	display: flex;
-	margin-left: 50px;
+	/*margin-left: 50px;*/
 }
 .ul-menu-header li {
 	position: relative;
-	padding: 5px 10px
+	padding: 5px 5px
 }
 .ul-menu-header li a{
 	/*padding: 0 0px;*/
@@ -28,8 +28,8 @@ header {
 	font-size: 16px;
 	text-decoration: none;
 }
-.ul-menu-header li.user {
-	padding-left: 30px;
+.right-header li.user {
+	padding-right: 30px;
 }
 /* Dropdown Online */
 .dropbtn-online {
@@ -398,8 +398,7 @@ footer {
 }
 .header-about {
 	background-image: url("../images/bg/about.png");
-	height: 274px;
-	background-size: 100% auto;
+	background-size: cover;
 	background-repeat: no-repeat;
 	text-align: center;
 	width: 100%;
@@ -411,6 +410,7 @@ footer {
 	font-size: 36px;
 	color: #FFF;
 	margin: 0 auto;
+	padding: 80px 0;
 }
 .breadcrumb-nav {
 	height: 50px;
@@ -876,8 +876,73 @@ p {
 }
 
 
-
-
+.over-all {
+	width: 100%;
+	display: inline-flex;
+}
+.over-1 {
+	padding-left: 20px;
+	width: 50%;
+	font-size: 18px;
+	color: #80090F;
+}
+.over-2 {
+	padding-right: 20px;
+	width: 50%;
+	font-size: 24px;
+	text-align: right;
+	color: #80090F;
+}
+.btn-quotation {
+	width: 100%;
+	background-color: #80090F;
+	color: #FFF;
+	font-size: 18px;
+	margin: 20px 0;
+}
+.btn-quotation:hover {
+	background-color: #80090fc7;
+	color: #FFF;
+}
+.btn-back-pro {
+	background-color: #80090F;
+	color: #FFF;
+	width: 303px;
+	margin: 50px 0;
+}
+.btn-back-pro:hover {
+	background-color: #80090fc7;
+	color: #FFF;
+}
+.active-page {
+	color: #80090F;
+}
+.space-promotion {
+	margin: 8px 0;
+}
+.space-promotion img {
+	width: 100%;
+}
+.space-catalogue {
+	margin: 20px 0;
+}
+.space-catalogue img {
+	width: 100%;
+}
+.space-catalogue h4 {
+	margin: 10px 0;
+}
+.download-catalogue {
+	padding: 10px 0;
+}
+.download-catalogue a {
+	color: #80090F;
+	font-size: 18px;
+}
+.download-catalogue i {
+	color: #000;
+	padding-right: 10px;
+}
 
 
 

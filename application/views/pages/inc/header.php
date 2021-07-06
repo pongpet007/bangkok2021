@@ -2,12 +2,12 @@
 <header>
 	<div class="container d-lg-block d-md-none d-sm-none d-none">
 		<div class="row">
-			<div class="col-lg-1 col-md-1">
+			<div class="col-lg-2 col-md-2">
 				<a href="<?=base_url("Home")?>" class="">
 					<img src="<?=base_url()?>images/logo/logo-bangkok.png" alt="bangkok">
 				</a>
 			</div>
-			<div class="col-lg-9 col-md-9">
+			<div class="col-lg-7 col-md-7">
 				<ul class="ul-menu-header">
 					<li>
 						<a href="<?=base_url($this->session->userdata("site_lang_name")."/About")?>">
@@ -31,7 +31,7 @@
 								<a href="<?=base_url($this->session->userdata("site_lang_name")."/Products")?>" class="menu">
 									<?=lang("product-service")?>
 								</a>
-								<a href="#" class="menu">
+								<a href="<?=base_url($this->session->userdata("site_lang_name")."/Promotion")?>" class="menu">
 									<?=lang("promotion")?>
 								</a>
 							</div>
@@ -58,7 +58,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="#">
+						<a href="<?=base_url($this->session->userdata("site_lang_name")."/Catalogue")?>">
 							<?=lang("catalogue")?>
 						</a>
 					</li>
@@ -77,6 +77,11 @@
 							</div>
 						</div>
 					</li>
+					
+				</ul>
+			</div>
+			<div class="col-lg-3 col-md-3">
+				<ul class="right-header">
 					<li class="user">
 						<div class="dropdown-user">
 							<a href="#" class="dropbtn-online login">
@@ -93,10 +98,6 @@
 						</div>
 					</li>
 
-				</ul>
-			</div>
-			<div class="col-lg-2 col-md-2">
-				<ul class="right-header">
 					<li>
 						<a href="#">
 							<img src="<?=base_url()?>images/icon/cart.png">
@@ -139,21 +140,37 @@
 	<div class="d-lg-none d-md-block d-sm-block d-block" style="width:100%">
 		
 
-		<nav class="mobile-nav" role="navigation">
-			<div id="menuToggle">
-				<input type="checkbox" />
-				<span></span>
-				<span></span>
-				<span></span>
-				<ul id="menu">
-					<li><a href="#">Home</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Info</a></li>
-					<li><a href="#">Contact</a></li>
-				</ul>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#">Navbar</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="#">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Features</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Pricing</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+								Dropdown link
+							</a>
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+								<li><a class="dropdown-item" href="#">Action</a></li>
+								<li><a class="dropdown-item" href="#">Another action</a></li>
+								<li><a class="dropdown-item" href="#">Something else here</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</nav>
-		
 
 	</div>
 	
@@ -192,7 +209,7 @@
 	overflow: hidden;
 }
 .mobile-nav {
-	background-color: #1E1E23;
+	background-color: #80090F;
 	height: 65px;
 	position: fixed;
 	width: 100%;

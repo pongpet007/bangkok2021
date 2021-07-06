@@ -38,7 +38,7 @@
 					<nav aria-label="breadcrumb">
 						<ol class="breadcrumb">
 							<li class="breadcrumb-item"><a href="#" class="btn-breadcrumb"><?=lang("home")?></a></li>
-							<li class="breadcrumb-item active" aria-current="page"><?=lang("shopping-cart")?></li>
+							<li class="breadcrumb-item active-page" aria-current="page"><?=lang("shopping-cart")?></li>
 						</ol>
 					</nav>
 				</div>
@@ -121,6 +121,12 @@
 								</div>
 							</div>
 
+							<div class="back-home">
+								<a href="<?=base_url($this->session->userdata('site_lang_name'))?>/Products" class="btn btn-back-pro">
+									<?=lang("back-to-products")?>
+								</a>
+							</div>
+
 
 						</div>
 						
@@ -143,11 +149,19 @@
 								</div>
 							</div>
 							<hr>
-							<div class="">
-								<?=lang("overall")?>
+							<div class="over-all">
+								<div class="over-1">
+									<?=lang("overall")?>
+								</div>
+								<div class="over-2">
+									2,000.- <?=lang("bath")?>
+								</div>
 							</div>
+							<a href="#" class="btn btn-quotation">
+								<?=lang("quotation")?>
+							</a>
 						</div>
-						<div class="warpper">
+						<!-- <div class="warpper">
 							<div class="card">
 								<img src="https://images.unsplash.com/photo-1477666250292-1419fac4c25c?auto=format&fit=crop&w=667&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" class="img-nn">
 								<div class="info">
@@ -156,7 +170,7 @@
 									<button class="btn-nn">Read more</button>
 								</div>
 							</div>
-						</div>
+						</div> -->
 						
 					</div>
 				</div>

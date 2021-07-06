@@ -44,6 +44,10 @@ $lang["shopping-cart"] = 'Shopping cart';
 $lang["total"] = 'ทั้งหมด';
 $lang["Summary of all items"] = 'Summary of all items';
 $lang["list"] = '';
+$lang["overall"] = 'overall';
+$lang["bath"] = 'bath';
+$lang["back-to-products"] = 'Back to products';
+$lang["download-catalogue"] = 'download catalogue';
 
 
 

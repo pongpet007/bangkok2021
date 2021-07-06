@@ -52,7 +52,7 @@
 									หมวดสินค้า
 								</a>
 							</li>
-							<li class="breadcrumb-item active" aria-current="page">
+							<li class="breadcrumb-item active-page" aria-current="page">
 								ชื่อสินค้า
 							</li>
 						</ol>

@@ -29,7 +29,7 @@
 					<nav aria-label="breadcrumb">
 						<ol class="breadcrumb">
 							<li class="breadcrumb-item"><a href="#" class="btn-breadcrumb"><?=lang("home")?></a></li>
-							<li class="breadcrumb-item active" aria-current="page"><?=lang("about-us")?></li>
+							<li class="breadcrumb-item active-page" aria-current="page"><?=lang("about-us")?></li>
 						</ol>
 					</nav>
 				</div>
