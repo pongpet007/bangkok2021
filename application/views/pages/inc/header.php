@@ -68,10 +68,10 @@
 								<?=lang("contact-us")?>
 							</a>
 							<div class="dropdown-content-contact-us">
-								<a href="#" class="menu">
+								<a href="<?=base_url($this->session->userdata("site_lang_name")."/Contactus")?>" class="menu">
 									<?=lang("contact-us")?>
 								</a>
-								<a href="#" class="menu">
+								<a href="<?=base_url($this->session->userdata("site_lang_name")."/Job")?>" class="menu">
 									<?=lang("join-with-us")?>
 								</a>
 							</div>
@@ -84,12 +84,15 @@
 				<ul class="right-header">
 					<li class="user">
 						<div class="dropdown-user">
-							<a href="#" class="dropbtn-online login">
+							<a href="<?=base_url($this->session->userdata('site_lang_name'))?>/User/login" class="dropbtn-online login">
 								Login
 							</a>
 							<div class="dropdown-content-user">
-								<a href="#" class="menu">
+								<a href="<?=base_url($this->session->userdata('site_lang_name'))?>/User/profile" class="menu">
 									<?=lang("profile-detail")?>
+								</a>
+								<a href="<?=base_url($this->session->userdata('site_lang_name'))?>/User/login" class="menu">
+									login **
 								</a>
 								<a href="#" class="menu">
 									<?=lang("logout")?>

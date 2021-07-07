@@ -51,6 +51,52 @@ $lang["bath"] = 'บาท';
 $lang["back-to-products"] = 'กลับไปหน้าสินค้า';
 $lang["download-catalogue"] = 'ดาวน์โหลดแคตตาล็อก';
 $lang["interest-blog"] = 'บทความน่าสนใจ';
+$lang["Recommended news"] = 'ข่าวสารแนะนำ';
+$lang["Ask for more"] = 'สอบถามเพิ่มเติ่ม';
+$lang["Contact us"] = 'ติดต่อสอบถาม';
+$lang["Head office"] = 'สำนักงานใหญ่';
+$lang["Fill out the inquiry form"] = 'กรอกแบบฟอร์มติดต่อสอบถาม';
+$lang["name-surname"] = 'ชื่อ-นามสกุล';
+$lang["Please enter your first and last name"] = 'กรุณากรอกชื่อ-นามสกุล';
+$lang["Inquiry message"] = 'ข้อความสอบถาม';
+$lang["text"] = 'ข้อความ';
+$lang["send information"] = 'ส่งข้อมูล';
+$lang["login-regiter"] = 'เข้าสู่ระบบ / ลงทะเบียน';
+$lang["login"] = 'เข้าสู่ระบบ';
+$lang["Please enter email"] = 'กรุณากรอกอีเมล';
+$lang["password"] = 'รหัสผ่าน';
+$lang["Please enter password"] = 'กรุณากรอกรหัสผ่าน';
+$lang["password-agian"] = 'รหัสผ่านอีกครั้ง';
+$lang["Please enter password again"] = 'กรุณากรอกรหัสผ่านอีกครั้ง';
+$lang["register"] = 'ลงทะเบียน';
+$lang["account information"] = 'ข้อมูลบัญชี';
+$lang["address"] = 'ที่อยู่';
+$lang["quote request list"] = 'รายการขอใบเสนอราคา';
+$lang["Attach the transfer slip"] = 'แนบสลิปการโอนเงิน';
+$lang["change-password"] = 'เปลี่ยนรหัสผ่าน';
+$lang["name"] = 'ชื่อ';
+$lang["lastname"] = 'นามสกุล';
+$lang["Please enter your firstname"] = 'กรุณากรอกชื่อ';
+$lang["Please enter your lastname"] = 'กรุณากรอกนามสกุล';
+$lang['telephone-number'] = 'เบอร์โทรศัพท์';
+$lang["Please enter your telephone number"] = 'กรุณากรอกเบอร์โทรศัพท์';
+$lang["confirm"] = 'ยืนยัน';
+$lang["edit address"] = 'แก้ไขที่อยู่';
+$lang["province"] = 'จังหวัด';
+$lang["Please enter address"] = 'กรุณากรอกที่อยู่';
+$lang["district/amphur"] = 'เขต/อำเภอ';
+$lang["sub-district"] = 'แขวง/ตำบล';
+$lang["postcode"] = 'รหัสไปรษณีย์';
+$lang["detail"] = 'รายละเอียด';
+$lang["delete"] = 'ลบ';
+$lang["back"] = 'ย้อนกลับ';
+
+
+
+
+
+
+
 
 
 ?>

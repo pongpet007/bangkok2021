@@ -19,6 +19,7 @@ class User extends CI_Controller {
 		$this->load->model('cms/Content_row_item_model');
 		$this->load->model('cms/Content_row_item_template_model');
 		$this->load->model('cms/Menu_model');
+		$this->load->model('Country_model');
 
 	}
 
@@ -56,12 +57,12 @@ class User extends CI_Controller {
 				$str = md5($useremail);
 				
 				$params = array(						
-								'cus_name'=>$username,	
-								'cus_pass'=>$userpassword,	
-								'cus_verify'=>$str,	
-								'cus_email'=>$useremail
-							);
-					
+					'cus_name'=>$username,	
+					'cus_pass'=>$userpassword,	
+					'cus_verify'=>$str,	
+					'cus_email'=>$useremail
+				);
+
 				$this->db->insert('customer',$params);
 
 				$row = $this->Login_model->checkLogin2($useremail,$userpassword);
@@ -100,161 +101,198 @@ class User extends CI_Controller {
 		   		}
 		   		else{
 		    		echo "Send error";
-		   		}*/	
-			}
+		    	}*/	
+		    }
 		}
 	}
 
-	public function Login()
-	{
-		$data['counter'] = $this->Counter_model->count();
-		$data["categorys"] = $this->Category_model->getAll();
+	public function login($lang = '')	{
+
+		// $data['counter'] = $this->Counter_model->count();
+		// $data["categorys"] = $this->Category_model->getAll();
 		////////////////////// Theme ///////////////////////////////////
-		$company = $this->Config_model->getConfig();
-		$data['com_title_en'] = $company->com_title_en;
-		$data['com_title_th'] = $company->com_title_th;
-		$data['metaDescription'] = $company->metaDescription;
-		$data['metaKeyword'] = $company->metaKeyword;
-		$data['companyData'] = $company;
-		$theme_path = $company->theme_path;
-		$data['theme_path'] = $theme_path;
-		$data["theme_assets_path"] = $company->theme_assets_path;
+		// $company = $this->Config_model->getConfig();
+		// $data['com_title_en'] = $company->com_title_en;
+		// $data['com_title_th'] = $company->com_title_th;
+		// $data['metaDescription'] = $company->metaDescription;
+		// $data['metaKeyword'] = $company->metaKeyword;
+		// $data['companyData'] = $company;
+		// $theme_path = $company->theme_path;
+		// $data['theme_path'] = $theme_path;
+		// $data["theme_assets_path"] = $company->theme_assets_path;
 		
-		$data['lang'] = $this->session->userdata('site_lang');
+		// $data['lang'] = $this->session->userdata('site_lang');
 		
-		$menus = $this->Menu_model->getMain();
+		// $menus = $this->Menu_model->getMain();
 		// echo $this->db->last_query();
 		// exit();
 
-		foreach ($menus as $menu) {
-			$menu->submenu = $this->Menu_model->getsub($menu->menu_id);
-		}
-		$data['menus'] = $menus ;
+		// foreach ($menus as $menu) {
+		// 	$menu->submenu = $this->Menu_model->getsub($menu->menu_id);
+		// }
+		// $data['menus'] = $menus ;
 
-			
-		$search = array();
-		$data['config'] = $this->Config_model->getConfig();		
+
+		// $search = array();
+		// $data['config'] = $this->Config_model->getConfig();		
 		
 		// $data['products']  = $this->Products_model->getPopular(5,0);	
 		// $data['counter'] = $this->Counter_model->getCount();
 		
 		
-		$this->form_validation->set_rules('username','email','trim|required');	
-		$this->form_validation->set_rules('password','Password','trim|required');			
-		if($this->form_validation->run()==FALSE){
-			$this->session->set_flashdata('errors', validation_errors());
+		// $this->form_validation->set_rules('username','email','trim|required');	
+		// $this->form_validation->set_rules('password','Password','trim|required');			
+		// if($this->form_validation->run()==FALSE){
+		// 	$this->session->set_flashdata('errors', validation_errors());
 
-			$data[] ='';
+		// 	$data[] ='';
 			//echo "<script>alert('saved');window.opener.location.reload();window.close();</script>";
-			redirect('Login');
-		}else{				
+			// redirect('Login');
+		// }else{				
 		// print_r($this->form_validation->run());
 		// exit();
-			$username = $this->input->post('username');
-			$password = $this->input->post('password');
+			// $username = $this->input->post('username');
+			// $password = $this->input->post('password');
 
-			if($row = $this->Login_model->checkLogin2($username,$password)){
+			// if($row = $this->Login_model->checkLogin2($username,$password)){
 				/*if ($row->cus_status==1) {
 					echo "<script>alert('โปรดยืนยันตัวตนที่อีเมล');window.opener.location.reload();window.close();</script>";
 					redirect();
 				}else{*/
-					$this->session->set_userdata('ssid',$row->cus_id);
-					$this->session->set_userdata('ssusername',$row->cus_name);
-					$this->session->set_userdata('ssfullname',$row->cus_email);
-					echo "<script>alert('Login Success');window.opener.location.reload();window.close();</script>";
+					// $this->session->set_userdata('ssid',$row->cus_id);
+					// $this->session->set_userdata('ssusername',$row->cus_name);
+					// $this->session->set_userdata('ssfullname',$row->cus_email);
+					// echo "<script>alert('Login Success');window.opener.location.reload();window.close();</script>";
 					
 					
-				/*}*/
-				
-			}
-			else{
-				$this->session->set_flashdata('errors','Username or Password Invalid');
-				$data[] = '';
-				redirect();
-			}
-		}
+					/*}*/
 
-	}
+			// }
+		// 	else{
+		// 		$this->session->set_flashdata('errors','Username or Password Invalid');
+		// 		$data[] = '';
+		// 		redirect();
+		// 	}
+		// }
 
-	public function Verify($code)
-	{
-		
-		$data['counter'] = $this->Counter_model->count();
-		$data["categorys"] = $this->Category_model->getAll();
+					$countrys = $this->Country_model->getAll();
+					$data['countrys'] = $countrys;
+
+					$this->load->view('pages/user-login',$data);
+
+				}
+
+
+				public function profile($lang = '') {
+					$countrys = $this->Country_model->getAll();
+					$data['countrys'] = $countrys;
+
+					$this->load->view('pages/user-profile',$data);
+				}
+
+				public function address($lang = '') {
+					$countrys = $this->Country_model->getAll();
+					$data['countrys'] = $countrys;
+
+					$this->load->view('pages/user-address',$data);
+				}
+
+				public function request($lang = '') {
+					$countrys = $this->Country_model->getAll();
+					$data['countrys'] = $countrys;
+
+					$this->load->view('pages/user-request',$data);
+				}
+
+				public function request_detail($lang = '',$request_id = '') {
+					$countrys = $this->Country_model->getAll();
+					$data['countrys'] = $countrys;
+
+					$this->load->view('pages/user-request-detail',$data);
+				}
+
+
+
+
+				public function Verify($code)
+				{
+
+					$data['counter'] = $this->Counter_model->count();
+					$data["categorys"] = $this->Category_model->getAll();
 		////////////////////// Theme ///////////////////////////////////
-		$company = $this->Config_model->getConfig();
-		$data['com_title_en'] = $company->com_title_en;
-		$data['com_title_th'] = $company->com_title_th;
-		$data['metaDescription'] = $company->metaDescription;
-		$data['metaKeyword'] = $company->metaKeyword;
-		$data['companyData'] = $company;
-		$theme_path = $company->theme_path;
-		$data['theme_path'] = $theme_path;
-		$data["theme_assets_path"] = $company->theme_assets_path;
-		
-		$data['lang'] = $this->session->userdata('site_lang');
-		
-		$menus = $this->Menu_model->getMain();
+					$company = $this->Config_model->getConfig();
+					$data['com_title_en'] = $company->com_title_en;
+					$data['com_title_th'] = $company->com_title_th;
+					$data['metaDescription'] = $company->metaDescription;
+					$data['metaKeyword'] = $company->metaKeyword;
+					$data['companyData'] = $company;
+					$theme_path = $company->theme_path;
+					$data['theme_path'] = $theme_path;
+					$data["theme_assets_path"] = $company->theme_assets_path;
+
+					$data['lang'] = $this->session->userdata('site_lang');
+
+					$menus = $this->Menu_model->getMain();
 		// echo $this->db->last_query();
 		// exit();
 
-		foreach ($menus as $menu) {
-			$menu->submenu = $this->Menu_model->getsub($menu->menu_id);
-		}
-		$data['menus'] = $menus ;
+					foreach ($menus as $menu) {
+						$menu->submenu = $this->Menu_model->getsub($menu->menu_id);
+					}
+					$data['menus'] = $menus ;
 
-			
-		$search = array();
-		$data['config'] = $this->Config_model->getConfig();		
-		
-		if($row = $this->Login_model->checkverify($code)){
-					
-					$params = array('cus_status'=>2);
 
-		
-					$this->db->where('cus_id', $row->cus_id);
-					$this->db->update('customer',$params);
+					$search = array();
+					$data['config'] = $this->Config_model->getConfig();		
 
-					$this->session->set_userdata('ssid',$row->cus_id);
-					$this->session->set_userdata('ssusername',$row->cus_name);
-					$this->session->set_userdata('ssfullname',$row->cus_email);
+					if($row = $this->Login_model->checkverify($code)){
 
-					redirect('User/sendverify_complete');
+						$params = array('cus_status'=>2);
+
+
+						$this->db->where('cus_id', $row->cus_id);
+						$this->db->update('customer',$params);
+
+						$this->session->set_userdata('ssid',$row->cus_id);
+						$this->session->set_userdata('ssusername',$row->cus_name);
+						$this->session->set_userdata('ssfullname',$row->cus_email);
+
+						redirect('User/sendverify_complete');
+
+					}
+					else{
+
+						$this->session->set_flashdata('errors','Username or Password Invalid');
+
+						$data[] = '';
+
+						$this->load->view($theme_path.'/login',$data);
+					}	
+
+					$this->load->view($theme_path.'/blog',$data);
 
 				}
-				else{
 
-					$this->session->set_flashdata('errors','Username or Password Invalid');
-					
-					$data[] = '';
+				public function sendverify_complete($pro_id=0)
+				{
+					$data['counter'] = $this->Counter_model->count();
+					$data["categorys"] = $this->Category_model->getAll();
+					$company = $this->Config_model->getConfig();
+					$data['companyData'] = $company;
+					$theme_path = $company->theme_path;
+					$data['theme_path'] = $theme_path;
+					$data["theme_assets_path"] = $company->theme_assets_path;
 
-					$this->load->view($theme_path.'/login',$data);
-				}	
-		
-		$this->load->view($theme_path.'/blog',$data);
+					$menus = $this->Menu_model->getMain();
+					foreach ($menus as $menu) {
+						$menu->submenu = $this->Menu_model->getsub($menu->menu_id);
+					}
+					$data['menus'] = $menus ;
 
-	}
-
-	public function sendverify_complete($pro_id=0)
-	{
-		$data['counter'] = $this->Counter_model->count();
-		$data["categorys"] = $this->Category_model->getAll();
-		$company = $this->Config_model->getConfig();
-		$data['companyData'] = $company;
-		$theme_path = $company->theme_path;
-		$data['theme_path'] = $theme_path;
-		$data["theme_assets_path"] = $company->theme_assets_path;
-		
-		$menus = $this->Menu_model->getMain();
-		foreach ($menus as $menu) {
-			$menu->submenu = $this->Menu_model->getsub($menu->menu_id);
-		}
-		$data['menus'] = $menus ;
-
-		$data['lang'] = $this->session->userdata('site_lang');
-		$data['config'] = $this->Config_model->getConfig();
+					$data['lang'] = $this->session->userdata('site_lang');
+					$data['config'] = $this->Config_model->getConfig();
 
 
-		$this->load->view($theme_path.'/verify_complete',$data);
-	}
-}
+					$this->load->view($theme_path.'/verify_complete',$data);
+				}
+			}

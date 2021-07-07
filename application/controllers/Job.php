@@ -45,7 +45,7 @@ class Job extends CI_Controller {
 		// 	$menu->submenu = $this->Menu_model->getsub($menu->menu_id);
 		// }
 		// $data['menus'] = $menus ;		
-		// $data['countrys'] = $this->Country_model->getAll();
+		$data['countrys'] = $this->Country_model->getAll();
 
 		
 		// $search = array();
@@ -76,7 +76,7 @@ class Job extends CI_Controller {
 		// ##################################################
 		
 		// $this->load->view($theme_path.'/job',$data);
-
+		$this->load->view('pages/job',$data);
 	}
 	
 
@@ -85,14 +85,14 @@ class Job extends CI_Controller {
 		$countrys = $this->Country_model->getAll();
 		
 		$data['countrys'] = $countrys;
-		$data['counter'] = $this->Counter_model->count();
+		// $data['counter'] = $this->Counter_model->count();
 		// $data["categorys"] = $this->Category_model->getAll();
  	// 	////////////////////// Theme ///////////////////////////////////
-		$company = $this->Company_model->getOne(1);		
-		$data['companyData'] = $company;
-		$data['meta_title'] = $company->meta_title;
-		$data['meta_keyword'] = $company->meta_keyword;
-		$data['meta_description'] = $company->meta_description;
+		// $company = $this->Company_model->getOne(1);		
+		// $data['companyData'] = $company;
+		// $data['meta_title'] = $company->meta_title;
+		// $data['meta_keyword'] = $company->meta_keyword;
+		// $data['meta_description'] = $company->meta_description;
 		
 		// $theme_path = $company->theme_path;
 		// $data['theme_path'] = $theme_path;
@@ -120,31 +120,31 @@ class Job extends CI_Controller {
 
 		// //echo $this->db->last_query();
 		
-		$jobdetail = $this->Job_model->getOne($job_id);
+		// $jobdetail = $this->Job_model->getOne($job_id);
 
-		$data['meta_title'] = $jobdetail->meta_title;
-		$data['meta_keyword'] = $jobdetail->meta_keyword;
-		$data['meta_description'] = $jobdetail->meta_description;
+		// $data['meta_title'] = $jobdetail->meta_title;
+		// $data['meta_keyword'] = $jobdetail->meta_keyword;
+		// $data['meta_description'] = $jobdetail->meta_description;
 
 		// print_r($jobdetail);
-		$data['job'] = $jobdetail ;
+		// $data['job'] = $jobdetail ;
 
-		$jobrelate = $this->Job_model->getRelate($job_id);
+		// $jobrelate = $this->Job_model->getRelate($job_id);
 
 		// print_r($jobrelate);
-		$data['jobrelate'] = $jobrelate;
+		// $data['jobrelate'] = $jobrelate;
 
-		$limit = 3;
-		$blogall = $this->Blog_model->getLimit($limit);
+		// $limit = 3;
+		// $blogall = $this->Blog_model->getLimit($limit);
 
 		// print_r($blogall);
-		$image_group_id = 2;
-		foreach ($blogall as $blog) { 
-			$blog->images = $this->Image_manage_model->getinuseProduct($image_group_id,$blog->blog_id);
-		}
+		// $image_group_id = 2;
+		// foreach ($blogall as $blog) { 
+		// 	$blog->images = $this->Image_manage_model->getinuseProduct($image_group_id,$blog->blog_id);
+		// }
 
 		
-		$data['blogall'] = $blogall;
+		// $data['blogall'] = $blogall;
 
 		// print_r($data['blogall']);
 		// exit();
@@ -154,7 +154,8 @@ class Job extends CI_Controller {
 		// ##################################################
 		
 		// $this->load->view($theme_path.'/job_detail',$data);
-		$this->load->view('2021_theme_1/job-detail',$data);
+		// $this->load->view('2021_theme_1/job-detail',$data);
+		$this->load->view('pages/job-detail',$data);
 	}
 
 

@@ -19,24 +19,31 @@ class Contactus extends CI_Controller {
 		$this->load->model('Blog_model');			
 		$this->load->model('Counter_model');
 		$this->load->model('cms/Menu_model');
+		$this->load->model('Country_model');
 	}
 
 	public function index()
 	{	
-		exti();
-		$data['counter'] = $this->Counter_model->count();	
-		$data['companyData'] = $this->Config_model->getConfig();
-		$data['widget'] = $this->recaptcha->getWidget();
-        $data['script'] = $this->recaptcha->getScriptTag();  
-		$data['lang'] = $this->session->userdata('site_lang');
-		$data['config'] = $this->Config_model->getConfig();
-		$data['footer_newss'] = $this->News_model->getAll(4,0,array('news_type_id'=>0));
-		$data['blogs'] = $this->Blog_model->getAll(200,0,array());
-		$data['language'] = array('EN'=>'eng','TH'=>'ไทย');
-		$data['menuactive'] = 5;
-		$data['pages'] = "contactus/index";
-		$this->load->view('theme_2020_v1/index',$data);
+		// exti();
+		// $data['counter'] = $this->Counter_model->count();	
+		// $data['companyData'] = $this->Config_model->getConfig();
+		// $data['widget'] = $this->recaptcha->getWidget();
+  //       $data['script'] = $this->recaptcha->getScriptTag();  
+		// $data['lang'] = $this->session->userdata('site_lang');
+		// $data['config'] = $this->Config_model->getConfig();
+		// $data['footer_newss'] = $this->News_model->getAll(4,0,array('news_type_id'=>0));
+		// $data['blogs'] = $this->Blog_model->getAll(200,0,array());
+		// $data['language'] = array('EN'=>'eng','TH'=>'ไทย');
+		// $data['menuactive'] = 5;
+		// $data['pages'] = "contactus/index";
+		$countrys = $this->Country_model->getAll();
+		$data['countrys'] = $countrys;
+
+
+		// $this->load->view('theme_2020_v1/index',$data);
+		$this->load->view('pages/contactus',$data);
 	}
+
 
 	public function sendMail()
 	{

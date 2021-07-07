@@ -50,6 +50,46 @@ $lang["bath"] = 'bath';
 $lang["back-to-products"] = 'Back to products';
 $lang["download-catalogue"] = 'download catalogue';
 $lang["interest-blog"] = 'Interesting article';
+$lang["Recommended news"] = 'Recommended news';
+$lang["Ask for more"] = 'Ask for more';
+$lang["Contact us"] = 'Contact us';
+$lang["Head office"] = 'Head office';
+$lang["Fill out the inquiry form"] = 'Fill out the inquiry form';
+$lang["name-surname"] = 'name-surname';
+$lang["Please enter your first and last name"] = 'Please enter your first and last name.';
+$lang["Inquiry message"] = 'Inquiry message';
+$lang["text"] = 'Text';
+$lang["send information"] = 'send information';
+$lang["login-regiter"] = 'Login / Register';
+$lang["login"] = 'Login';
+$lang["Please enter email"] = 'Please enter email';
+$lang["password"] = 'password';
+$lang["Please enter password"] = 'Please enter password';
+$lang["password-agian"] = 'password again';
+$lang["Please enter password again"] = 'Please enter password again';
+$lang["register"] = 'Register';
+$lang["account information"] = 'account information';
+$lang["address"] = 'address';
+$lang["quote request list"] = 'quote request list';
+$lang["Attach the transfer slip"] = 'Attach the transfer slip';
+$lang["change-password"] = 'change password';
+$lang["name"] = 'Name';
+$lang["lastname"] = 'Lastname';
+$lang["Please enter your firstname"] = 'Please enter your firstname.';
+$lang["Please enter your lastname"] = 'Please enter your lastname.';
+$lang['telephone-number'] = 'Telephone number';
+$lang["Please enter your telephone number"] = 'Please enter your telephone number';
+$lang["confirm"] = 'confirm';
+$lang["edit address"] = 'Edit address';
+$lang["province"] = 'Province';
+$lang["Please enter address"] = 'Please enter address';
+$lang["district/amphur"] = 'District/Amphur';
+$lang["sub-district"] = 'Sub-district';
+$lang["postcode"] = 'Postcode';
+$lang["detail"] = 'detail';
+$lang["delete"] = 'delete';
+$lang["back"] = 'back';
+
 
 
 

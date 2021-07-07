@@ -172,6 +172,59 @@ $route['(MM|mm)\/Blog\/index'] = 'Blog/index';
 $route['(VN|vn)\/Blog\/index'] = 'Blog/index';
 
 
+$route['(TH|th)\/User'] = 'User/index/$1';
+$route['(US|us)\/User'] = 'User/index/$1';
+$route['(KH|kh)\/User'] = 'User/index/$1';
+$route['(LA|la)\/User'] = 'User/index/$1';
+$route['(MM|mm)\/User'] = 'User/index/$1';
+$route['(VN|vn)\/User'] = 'User/index/$1';
+
+
+$route['(TH|th)\/User\/login'] = 'User/login/$1';
+$route['(US|us)\/User\/login'] = 'User/login/$1';
+$route['(KH|kh)\/User\/login'] = 'User/login/$1';
+$route['(LA|la)\/User\/login'] = 'User/login/$1';
+$route['(MM|mm)\/User\/login'] = 'User/login/$1';
+$route['(VN|vn)\/User\/login'] = 'User/login/$1';
+
+$route['(TH|th)\/User\/profile'] = 'User/profile/$1';
+$route['(US|us)\/User\/profile'] = 'User/profile/$1';
+$route['(KH|kh)\/User\/profile'] = 'User/profile/$1';
+$route['(LA|la)\/User\/profile'] = 'User/profile/$1';
+$route['(MM|mm)\/User\/profile'] = 'User/profile/$1';
+$route['(VN|vn)\/User\/profile'] = 'User/profile/$1';
+
+
+$route['(TH|th)\/User\/address'] = 'User/address/$1';
+$route['(US|us)\/User\/address'] = 'User/address/$1';
+$route['(KH|kh)\/User\/address'] = 'User/address/$1';
+$route['(LA|la)\/User\/address'] = 'User/address/$1';
+$route['(MM|mm)\/User\/address'] = 'User/address/$1';
+$route['(VN|vn)\/User\/address'] = 'User/address/$1';
+
+
+$route['(TH|th)\/User\/request'] = 'User/request/$1';
+$route['(US|us)\/User\/request'] = 'User/request/$1';
+$route['(KH|kh)\/User\/request'] = 'User/request/$1';
+$route['(LA|la)\/User\/request'] = 'User/request/$1';
+$route['(MM|mm)\/User\/request'] = 'User/request/$1';
+$route['(VN|vn)\/User\/request'] = 'User/request/$1';
+
+$route['(TH|th)\/User\/request_detail\/(\d+)'] = 'User/request_detail/$1/$2';
+$route['(US|us)\/User\/request_detail\/(\d+)'] = 'User/request_detail/$1/$2';
+$route['(KH|kh)\/User\/request_detail\/(\d+)'] = 'User/request_detail/$1/$2';
+$route['(LA|la)\/User\/request_detail\/(\d+)'] = 'User/request_detail/$1/$2';
+$route['(MM|mm)\/User\/request_detail\/(\d+)'] = 'User/request_detail/$1/$2';
+$route['(VN|vn)\/User\/request_detail\/(\d+)'] = 'User/request_detail/$1/$2';
+
+// $route['(TH|th)\/User\/login\/(.+)'] = 'User/login/$1/$2';
+// $route['(US|us)\/User\/login\/(.+)'] = 'User/login/$1/$2';
+// $route['(KH|kh)\/User\/login\/(.+)'] = 'User/login/$1/$2';
+// $route['(LA|la)\/User\/login\/(.+)'] = 'User/login/$1/$2';
+// $route['(MM|mm)\/User\/login\/(.+)'] = 'User/login/$1/$2';
+// $route['(VN|vn)\/User\/login\/(.+)'] = 'User/login/$1/$2';
+
+
 
 
 
@@ -385,6 +438,21 @@ $route['(KH|kh)\/Contactus'] = 'Content/index/3';
 $route['(LA|la)\/Contactus'] = 'Content/index/3';
 $route['(MM|mm)\/Contactus'] = 'Content/index/3';
 $route['(VN|vn)\/Contactus'] = 'Content/index/3';
+
+$route['(TH|th)\/Contactus'] = 'Contactus/index/$1';
+$route['(US|us)\/Contactus'] = 'Contactus/index/$1';
+$route['(KH|kh)\/Contactus'] = 'Contactus/index/$1';
+$route['(LA|la)\/Contactus'] = 'Contactus/index/$1';
+$route['(MM|mm)\/Contactus'] = 'Contactus/index/$1';
+$route['(VN|vn)\/Contactus'] = 'Contactus/index/$1';
+
+
+$route['(TH|th)\/Job'] = 'Job/index/$1';
+$route['(US|us)\/Job'] = 'Job/index/$1';
+$route['(KH|kh)\/Job'] = 'Job/index/$1';
+$route['(LA|la)\/Job'] = 'Job/index/$1';
+$route['(MM|mm)\/Job'] = 'Job/index/$1';
+$route['(VN|vn)\/Job'] = 'Job/index/$1';
 
 $route['(TH|th)\/Job\/detail\/(\d+)'] = 'Job/detail/$1/$2';
 $route['(US|us)\/Job\/detail\/(\d+)'] = 'Job/detail/$1/$2';

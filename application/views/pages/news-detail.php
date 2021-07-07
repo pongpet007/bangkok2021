@@ -20,7 +20,7 @@
 	<section class="content-about-us">
 		<div class="header-all" style="">
 			<div class="title-about">
-				<?=lang('article-knowledge')?>
+				<?=lang('news and activities')?>
 			</div>
 		</div>
 		<div class="breadcrumb-nav">
@@ -29,7 +29,7 @@
 					<nav aria-label="breadcrumb">
 						<ol class="breadcrumb">
 							<li class="breadcrumb-item"><a href="<?=base_url()?>" class="btn-breadcrumb"><?=lang("home")?></a></li>
-							<li class="breadcrumb-item"><a href="<?=base_url($this->session->userdata('site_lang_name'))?>/Blog" class="btn-breadcrumb"><?=lang("article and knowledge")?></a></li>
+							<li class="breadcrumb-item"><a href="<?=base_url($this->session->userdata('site_lang_name'))?>/News" class="btn-breadcrumb"><?=lang("news and activities")?></a></li>
 							<li class="breadcrumb-item active-page" aria-current="page">Title name</li>
 						</ol>
 					</nav>
@@ -78,7 +78,7 @@
 								<div class="col-lg-3 col-md-3 col-sm-3 col-12">
 
 									<h3 class="title-head-kk">
-										<?=lang("interest-blog")?>
+										<?=lang("Recommended news")?>
 									</h3>
 									<div>
 										<img src="<?=base_url()?>images/line-blog.png" style="width: 100%">
@@ -92,7 +92,7 @@
 											<p>
 												Lorem Ipsum is simply dummy text of the printing and typesetting indus
 											</p>
-											<a class="btn btn-right-blog" href="<?=base_url($this->session->userdata('site_lang_name'))?>/Blog/detail/1">
+											<a class="btn btn-right-blog" href="<?=base_url($this->session->userdata('site_lang_name'))?>/News/detail/1">
 												<img src="<?=base_url()?>images/icon/box-arrow-in-right.png">
 												&nbsp;&nbsp;
 												<?=lang("see-more")?>
@@ -109,7 +109,7 @@
 											<p>
 												Lorem Ipsum is simply dummy text of the printing and typesetting indus
 											</p>
-											<a class="btn btn-right-blog" href="<?=base_url($this->session->userdata('site_lang_name'))?>/Blog/detail/1">
+											<a class="btn btn-right-blog" href="<?=base_url($this->session->userdata('site_lang_name'))?>/News/detail/1">
 												<img src="<?=base_url()?>images/icon/box-arrow-in-right.png" >
 												&nbsp;&nbsp;
 												<?=lang("see-more")?>
@@ -127,7 +127,7 @@
 											<p>
 												Lorem Ipsum is simply dummy text of the printing and typesetting indus
 											</p>
-											<a class="btn btn-right-blog" href="<?=base_url($this->session->userdata('site_lang_name'))?>/Blog/detail/1">
+											<a class="btn btn-right-blog" href="<?=base_url($this->session->userdata('site_lang_name'))?>/News/detail/1">
 												<img src="<?=base_url()?>images/icon/box-arrow-in-right.png">
 												&nbsp;&nbsp;
 												<?=lang("see-more")?>

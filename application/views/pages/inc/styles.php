@@ -1035,8 +1035,194 @@ p {
 	text-align: right;
 	width: 50%;
 }
+.inter-blog-right {
+	
+}
+.inter-blog-right img {
+	margin:  10px 0;
+}
+.inter-blog-right h4 {
+	margin:  20px 0;
+}
+.inter-blog-right p {
+	margin:  20px 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+.btn-right-blog {
+	background-color: #80090F;
+	padding: 0px 20px;
+}
+.btn-right-blog {
+	color: #FFF;
+	margin: 10px 0;
+}
+.btn-right-blog:hover {
+	color: #FFF;
+}
+.space-news {
+	margin:  10px 0;
+}
+.space-news h4 {
+	margin:  20px 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+}
+.space-news p {
+	margin:  10px 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+.space-news a {
+	margin: 10px 0;
+}
+.input-contact-name {
+	border: 1px solid #E0E0E0;
+	padding: 5px 20px; 
+	margin: 10px 0;
+	width: 100%;
+}
+.btn-send-text {
+	margin: 10px 0;
+	width: 100%;
+	background-color: #80090F;
+	color: #FFF;
+}
+.btn-send-text:hover {
+	color: #FFF;
+}
+.detail-job-all {
+	margin: 30px 0;
+}
+.detail-job-all h4 {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	margin: 30px 0;
+}
+.detail-job-all p {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	margin: 30px 0;
+}
+.email-login {
+	margin: 20px 0;
+	font-size: 16px;
+	font-weight: ;
+}
+.login-username {
+	padding: 10px 20px;
+	width: 100%;
+	border: 1px solid #E0E0E0;
+	color: #868D96;
+}
+.btn-login {
+	margin: 30px 0;
+	padding: 10px 0;
+	width: 100%;
+	background-color: #080A14;
+	color: #FFF;
+}
+.btn-login:hover {
+	color: #FFF;
+}
+.btn-register {
+	margin: 30px 0;
+	padding: 10px 0;
+	width: 100%;
+	background-color: #80090F;
+	color: #FFF;
+}
 
+.btn-register:hover {
+	color: #FFF;
+}
+.menu-user {
+	padding: 15px 0;
+}
 
+.menu-user a {
+	color: #212529;
+	text-decoration: none;
+}
+.menu-user-active {
+	color: #80090F !important;
+}
+.d-p-f {
+	margin-top: 20px;
+	color: #212529;
+	font-size: 16px;
+}
+.line-menu-user {
+	border-bottom: 1px solid #707070;;
+}
+.btn-input-p {
+	padding: 5px 0 5px 20px;
+	width: 100%;
+	margin-top: 10px;
+	text-align: left;
+	border: 1px solid #E0E0E0;
+	border-radius: 5px;
+}
+.btn-save-profile {
+	text-align: center;
+	width: 303px;
+	padding: 10px 0;
+	margin-top: 30px;
+	background-color: #80090F;
+	color: #FFF;
+}
+.btn-save-profile:hover {
+	background-color: #dc202a;
+	transition: all 0.2s ease-in-out ;
+	color: #FFF;
+}
+.text-address {
+	width: 100%;
+	padding: 5px 0 0 30px;
+	border: 1px solid #E0E0E0;
+	border-radius: 5px;
+	margin-top: 20px;
+}
+.item-request {
+	padding-bottom: 30px;
+	margin-top: 50px;
+	border-bottom: 1px solid #707070;
+}
+.chk-request {
+	float: right;
+}
+.btn-detail-list {
+	color: #080A14;
+}
+.btn-detail-list:hover {
+	color: #363d60;
+}
+.btn-delete {
+	padding: 10px 0;
+	width: 303px;
+	background-color: #80090F;
+	margin: 40px 0;
+	color: #FFF;
+}
+.btn-delete:hover {
+	color: #FFF;
+	background-color: #dc202a;
+}
 
 
 
@@ -1084,6 +1270,20 @@ p {
 	.section-header {
 		margin-top: 65px;
 	}
+	.title-head-kk {
+		margin: 20px 0;
+	}
+	.space-blog-detail {
+		display: block;
+	}
+	.title-name-blog {
+		width: 100%;
+	}
+	.share-blog {
+		width: 100%;
+	}
+
+
 }
 @media(min-width:  768px) and (max-width:  1023px) {
 	.screen-pc {
@@ -1096,11 +1296,34 @@ p {
 		font-size: 30px;
 		margin-top: 50px;
 	}
+	.space-blog-detail {
+		display: block;
+	}
+	.title-name-blog {
+		width: 100%;
+	}
+	.share-blog {
+		width: 100%;
+		text-align: left;
+	}
+	.btn-goto-blog {
+		padding: 10px 10px;
+	}
 }
 @media(min-width:  1024px) and (max-width:  1359px) {
 	.content-header {
 		margin-top: 10px;
 		font-size: 36px;
+	}
+	.space-blog-detail {
+		display: block;
+	}
+	.title-name-blog {
+		width: 100%;
+	}
+	.share-blog {
+		width: 100%;
+		text-align: left;
 	}
 }
 @media(min-width:  1360px) and (max-width:  1600px) {
