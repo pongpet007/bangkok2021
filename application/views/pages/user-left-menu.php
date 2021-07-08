@@ -24,7 +24,7 @@
 	</div>
 	
 	<div class="menu-user line-menu-user"> 
-		<a href="#" class="nav-user-4">
+		<a href="<?=base_url($this->session->userdata('site_lang_name'))?>/User/slip" class="nav-user-4">
 			<i class="fas fa-chevron-right"></i>
 			&nbsp;
 			<?=lang('Attach the transfer slip')?>
@@ -32,7 +32,7 @@
 	</div>
 	
 	<div class="menu-user line-menu-user"> 
-		<a href="#" class="nav-user-5">
+		<a href="<?=base_url($this->session->userdata('site_lang_name'))?>/User/changepassword" class="nav-user-5">
 			<i class="fas fa-chevron-right"></i>
 			&nbsp;
 			<?=lang('change-password')?>

@@ -54,7 +54,7 @@
 											#ODER 01
 										</div>
 									</div>
-									<div class="col-lg-6 col-md-6 col-sm-6 col-12">
+									<div class="col-lg-3 col-md-3 col-sm-3 col-12">
 										<div style="font-size: 16px; color: #80090F;">
 											<?=lang('price')?> 0,000.- 
 										</div>
@@ -63,15 +63,25 @@
 										</div>
 									</div>
 									<div class="col-lg-3 col-md-3 col-sm-3 col-12">
+										<div class="confirm-slip">
+											<?=lang('The money transfer has been confirmed')?>
+										</div>
+										<div class="wait-confirm-slip">
+											
+										</div>
+									</div>
+									<div class="col-lg-3 col-md-3 col-sm-3 col-12">
 										<div class="check-detail-list">
-											<a href="<?=base_url($this->session->userdata('site_lang_name'))?>/User/request_detail/1" class="btn-detail-list">
-												<?=lang('detail')?>
-											</a>
+											<span class="btn-confirm-slip">
+												<?=lang('Slip sent')?>
+											</span>
 											<input type="checkbox" name="" class="chk-request">
 										</div>
 									</div>
 								</div>
 							</div>
+
+
 							<div class="item-request">
 								<div class="row">
 									<div class="col-lg-3 col-md-3 col-sm-3 col-12">
@@ -79,7 +89,7 @@
 											#ODER 01
 										</div>
 									</div>
-									<div class="col-lg-6 col-md-9 col-sm-9 col-12">
+									<div class="col-lg-3 col-md-3 col-sm-3 col-12">
 										<div style="font-size: 16px; color: #80090F;">
 											ราคา 0,000.- 
 										</div>
@@ -87,10 +97,16 @@
 											*ขอใบเสนอราคา
 										</div>
 									</div>
+
+									<div class="col-lg-3 col-md-3 col-sm-3 col-12">
+										<div class="wait-confirm-slip">
+											<?=lang('waiting to contact')?>
+										</div>
+									</div>
 									<div class="col-lg-3 col-md-3 col-sm-3 col-12">
 										<div class="check-detail-list">
-											<a href="<?=base_url($this->session->userdata('site_lang_name'))?>/User/request_detail/1" class="btn-detail-list">
-												<?=lang('detail')?>
+											<a href="<?=base_url($this->session->userdata('site_lang_name'))?>/User/request_detail/1" class="btn-attach-slip">
+												<?=lang('attach slip')?>
 											</a>
 											<input type="checkbox" name="" class="chk-request">
 										</div>
@@ -126,7 +142,7 @@
 
 	<script type="text/javascript">
 		$('#left-menu-user').ready(function(){
-			$('.nav-user-3').addClass('menu-user-active');
+			$('.nav-user-4').addClass('menu-user-active');
 		});
 	</script>
 

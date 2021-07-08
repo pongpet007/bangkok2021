@@ -15,9 +15,43 @@
 	
 
 	<section class="section-header" style="">
+
+		
+
+
 		<?
-		$this->load->view("pages/inc/header")
+		$this->load->view("pages/inc/header-index")
 		?>
+
+		<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="<?=base_url()?>images/bg/bg-1.png" class="d-block w-100" alt="...">
+				</div>
+				<div class="carousel-item">
+					<img src="<?=base_url()?>images/bg/bg-2.png" class="d-block w-100" alt="...">
+				</div>
+				<div class="carousel-item">
+					<img src="<?=base_url()?>images/bg/bg-3.png" class="d-block w-100" alt="...">
+				</div>
+				<div class="carousel-item">
+					<img src="<?=base_url()?>images/bg/bg-4.png" class="d-block w-100" alt="...">
+				</div>
+				<div class="carousel-item">
+					<img src="<?=base_url()?>images/bg/bg-5.png" class="d-block w-100" alt="...">
+				</div>
+			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+		</div>
+
+
 		<div class="content-header">
 			BANGKOK ABSOLUTE ELECTRIC AND CON
 		</div>
@@ -345,7 +379,7 @@
 
 	<style type="text/css">
 	.section-header {
-		background: url(<?=base_url()?>images/bg/bg-header.png) ;
+		
 		background-size: 100% auto;
 		height: 958px; 
 		background-repeat: no-repeat;
@@ -376,6 +410,22 @@
 
 
 </style>
+
+
+<script type="text/javascript">
+
+	$(document).on('scroll', function(){
+		if ( $(window).scrollTop() > 30) {
+			$('#header').addClass('header-active');
+		} else {
+			$('#header').removeClass('header-active');
+		}
+	});
+
+
+
+
+</script>
 
 
 <?

@@ -89,6 +89,15 @@ $lang["postcode"] = 'Postcode';
 $lang["detail"] = 'detail';
 $lang["delete"] = 'delete';
 $lang["back"] = 'back';
+$lang["delete-list"] = 'delete';
+$lang["The money transfer has been confirmed"] = 'The money transfer has been confirmed.';
+$lang["Slip sent"] = 'Slip sent';
+$lang["waiting to contact"] = 'waiting to contact';
+$lang["attach slip"] = 'attach slip';
+$lang["original code"] = 'old password';
+$lang["Please enter your old password"] = 'Please enter your old password.';
+$lang["new password"] = 'new password';
+$lang["Enter a new password again."] = 'Enter a new password again.';
 
 
 

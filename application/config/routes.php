@@ -210,6 +210,21 @@ $route['(LA|la)\/User\/request'] = 'User/request/$1';
 $route['(MM|mm)\/User\/request'] = 'User/request/$1';
 $route['(VN|vn)\/User\/request'] = 'User/request/$1';
 
+
+$route['(TH|th)\/User\/slip'] = 'User/slip/$1';
+$route['(US|us)\/User\/slip'] = 'User/slip/$1';
+$route['(KH|kh)\/User\/slip'] = 'User/slip/$1';
+$route['(LA|la)\/User\/slip'] = 'User/slip/$1';
+$route['(MM|mm)\/User\/slip'] = 'User/slip/$1';
+$route['(VN|vn)\/User\/slip'] = 'User/slip/$1';
+
+$route['(TH|th)\/User\/changepassword'] = 'User/changepassword/$1';
+$route['(US|us)\/User\/changepassword'] = 'User/changepassword/$1';
+$route['(KH|kh)\/User\/changepassword'] = 'User/changepassword/$1';
+$route['(LA|la)\/User\/changepassword'] = 'User/changepassword/$1';
+$route['(MM|mm)\/User\/changepassword'] = 'User/changepassword/$1';
+$route['(VN|vn)\/User\/changepassword'] = 'User/changepassword/$1';
+
 $route['(TH|th)\/User\/request_detail\/(\d+)'] = 'User/request_detail/$1/$2';
 $route['(US|us)\/User\/request_detail\/(\d+)'] = 'User/request_detail/$1/$2';
 $route['(KH|kh)\/User\/request_detail\/(\d+)'] = 'User/request_detail/$1/$2';

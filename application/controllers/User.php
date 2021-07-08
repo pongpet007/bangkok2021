@@ -211,6 +211,20 @@ class User extends CI_Controller {
 					$this->load->view('pages/user-request-detail',$data);
 				}
 
+				public function slip($lang = '') {
+					$countrys = $this->Country_model->getAll();
+					$data['countrys'] = $countrys;
+
+					$this->load->view('pages/user-slip',$data);
+				}
+
+				public function changepassword($lang = '') {
+					$countrys = $this->Country_model->getAll();
+					$data['countrys'] = $countrys;
+
+					$this->load->view('pages/user-changepassword',$data);
+				}
+
 
 
 

@@ -50,15 +50,100 @@
 							<div class="item-request">
 								<div class="row">
 									<div class="col-lg-3 col-md-3 col-sm-3 col-12">
-										
-									</div>
-									<div class="col-lg-6 col-md-9 col-sm-9 col-12">
-										
+										<div class="space-img-request">
+											<img src="<?=base_url()?>images/products/product-1-s.png" class="img-width-100">
+										</div>
 									</div>
 									<div class="col-lg-3 col-md-3 col-sm-3 col-12">
+										<div class="space-de-req">
+											<div class="name-request-pro">
+												Name S202M-C3 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+											</div>
+											<div class="bra-re-pro">
+												ABB
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-2 col-md-2 col-sm-2 col-12">
+										<div style="font-size: 16px; color: #80090F; margin-top: 20px;">
+											<?=lang('price')?> 0,000.- 
+										</div>
+										<div style="font-size: 16px; color: #080A14;">
+											*<?=lang('quotation')?>
+										</div>
+									</div>
+									<div class="col-lg-1 col-md-1 col-sm-1 col-12">
+										
+									</div>
+									<div class="col-lg-2 col-md-2 col-sm-2 col-12">
+										<div class="amount-pro">
+											<span>
+												1
+											</span>
+											<?=lang('amount')?>
+										</div>
+										<a href="#" class="del-list">
+											<?=lang('delete-list')?>
+										</a>
+									</div>
+									<div class="col-lg-1 col-md-1 col-sm-1 col-12">
 										
 									</div>
 								</div>
+							</div>
+
+							<div class="item-request">
+								<div class="row">
+									<div class="col-lg-3 col-md-3 col-sm-3 col-12">
+										<div class="space-img-request">
+											<img src="<?=base_url()?>images/products/product-1-s.png" class="img-width-100">
+										</div>
+									</div>
+									<div class="col-lg-3 col-md-3 col-sm-3 col-12">
+										<div class="space-de-req">
+											<div class="name-request-pro">
+												Name S202M-C3 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+											</div>
+											<div class="bra-re-pro">
+												ABB
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-2 col-md-2 col-sm-2 col-12">
+										<div style="font-size: 16px; color: #80090F; margin-top: 20px;">
+											<?=lang('price')?> 0,000.- 
+										</div>
+										<div style="font-size: 16px; color: #080A14;">
+											*<?=lang('quotation')?>
+										</div>
+									</div>
+									<div class="col-lg-1 col-md-1 col-sm-1 col-12">
+										
+									</div>
+									<div class="col-lg-2 col-md-2 col-sm-2 col-12">
+										<div class="amount-pro">
+											<span>
+												1
+											</span>
+											<?=lang('amount')?>
+										</div>
+										<a href="#" class="del-list">
+											<?=lang('delete-list')?>
+										</a>
+									</div>
+									<div class="col-lg-1 col-md-1 col-sm-1 col-12">
+										
+									</div>
+								</div>
+							</div>
+
+							<div class="more-detail-req">
+								<div class="title-more-detail-req">
+									<?=lang('text')?>
+								</div>
+								<p>
+									Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+								</p>
 							</div>
 							
 

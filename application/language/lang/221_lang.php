@@ -90,9 +90,15 @@ $lang["postcode"] = 'รหัสไปรษณีย์';
 $lang["detail"] = 'รายละเอียด';
 $lang["delete"] = 'ลบ';
 $lang["back"] = 'ย้อนกลับ';
-
-
-
+$lang["delete-list"] = 'ลบรายการ';
+$lang["The money transfer has been confirmed"] = 'ยืนยันการโอนเงินแล้ว';
+$lang["Slip sent"] = 'ส่งสลิปแล้ว';
+$lang["waiting to contact"] = 'รอการติดต่อ';
+$lang["attach slip"] = 'แนบสลิป';
+$lang["original code"] = 'รหัสผ่านเดิม';
+$lang["Please enter your old password"] = 'กรุณากรอกรหัสผ่านเดิม';
+$lang["new password"] = 'รหัสผ่านใหม่';
+$lang["Enter a new password again."] = 'กรอกรหัสผ่านใหม่อีกครั้ง';
 
 
 

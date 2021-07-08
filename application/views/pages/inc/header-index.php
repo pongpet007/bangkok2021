@@ -1,5 +1,5 @@
 
-<header>
+<header id="header">
 	<div class="container d-lg-block d-md-none d-sm-none d-none">
 		<div class="row">
 			<div class="col-lg-2 col-md-2">
@@ -222,13 +222,19 @@
 header {
 	padding-top: 40px;
 	padding-bottom: 20px;
-	
-	background-color: #80090F;
-	
+	position: fixed;
+	top: 0px;
+	z-index: 999;
+	width: 100%;
+	margin-bottom: 50px;
 }
 .header-active {
 	background-color: #000000a6;
 	transition: all 0.5s ease-in-out;
 }
+
+
+
+
 </style>
 

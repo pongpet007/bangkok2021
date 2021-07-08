@@ -8,10 +8,7 @@ body {
 	height: 958px;
 
 }
-header {
-	padding-top: 40px;
-	padding-bottom: 20px;
-}
+
 .ul-menu-header {
 	list-style: none;
 	flex-direction: : row;
@@ -1223,9 +1220,79 @@ p {
 	color: #FFF;
 	background-color: #dc202a;
 }
-
-
-
+.space-img-request {
+	border: 1px solid #E1E1E1;
+	padding: 20px 20px;
+}
+.name-request-pro {
+	font-size: 16px;
+	color: #080A14;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 5;
+	-webkit-box-orient: vertical;
+}
+.bra-re-pro {
+	margin-top: 40px;
+	width: 51px;
+	padding: 5px 0;
+	background-color: #80090F;
+	color: #FFF;
+	text-align: center;
+}
+.space-de-req {
+	padding: 20px 0;
+}
+.amount-pro {
+	text-align: right;
+}
+.amount-pro span {
+	color: #E5E5E5;
+	padding-right: 20px;
+}
+.del-list {
+	text-align: right;
+	float: right;
+	margin-top: 20px;
+	color: #080A14;
+}
+.del-list:hover {
+	color: #3f466c;
+}
+.more-detail-req {
+	margin: 20px 0;
+}
+.title-more-detail-req {
+	font-size: 24px;
+	color: #212529;
+}
+.more-detail-req p {
+	font-size: 16px;
+	margin: 30px 0;
+}
+.confirm-slip {
+	color: #4BDF64;
+}
+.btn-confirm-slip {
+	font-size: 16px;
+	color: #4BDF64;
+	text-decoration: none;
+}
+.btn-confirm-slip:hover {
+	color: #4BDF64;
+}
+.wait-confirm-slip {
+	font-size: 16px; 
+	color: #80090F;
+}
+.btn-attach-slip {
+	font-size: 16px;
+	color: #80090F;
+}
+.btn-attach-slip:hover {
+	color: #80090F;
+}
 
 
 
