@@ -38,27 +38,28 @@
 		<div class="space-about-page">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-6 col-md-6 col-sm-6 col-12">
-						<div class="space-promotion">
-							<img src="<?=base_url()?>images/promotion/promotion-1.png" alt="promotion">
+
+					<?
+					foreach ($promotions as $promotion) {
+						?>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-12">
+							<div class="space-promotion">
+
+								<img src="<?=base_url()?>images/promotion/<?=$promotion->promotion_name_img?>" alt="promotion">
+							</div>
 						</div>
-					</div>
-					<div class="col-lg-6 col-md-6 col-sm-6 col-12">
-						<div class="space-promotion">
-							<img src="<?=base_url()?>images/promotion/promotion-2.png" alt="promotion">
-						</div>
-					</div>
-					<div class="col-lg-6 col-md-6 col-sm-6 col-12">
-						<div class="space-promotion">
-							<img src="<?=base_url()?>images/promotion/promotion-3.png" alt="promotion">
-						</div>
-					</div>
-					<div class="col-lg-6 col-md-6 col-sm-6 col-12">
-						<div class="space-promotion">
-							<img src="<?=base_url()?>images/promotion/promotion-4.png" alt="promotion">
-						</div>
+						<?
+					}
+					?>
+					
+				</div>
+
+				<div class="row">
+					<div class="col-md-12 col-12">
+						<?=$links?>
 					</div>
 				</div>
+
 			</div>
 
 		</div>

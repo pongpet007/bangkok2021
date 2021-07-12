@@ -19,7 +19,7 @@ class Promotion extends CI_Controller {
 		$this->load->model('Brand_model');
 		$this->load->model('Promotion_model');
 		$this->load->model('Image_manage_model');
-		$this->load->model('cms/Menu_model');
+		$this->load->model('Promotion_model');
 
 	}
 
@@ -28,6 +28,20 @@ class Promotion extends CI_Controller {
 		$countrys = $this->Country_model->getAll();
 		$data['counter'] = $this->Counter_model->count();
 		$data['countrys'] = $countrys;
+
+		// ----------------------------- Need ----------------------------- 
+
+		$companyData = $this->Company_model->getComContact();
+		$company = $this->Company_model->getOne(1);
+
+		$data['meta_title'] = $company->meta_title;
+		$data['meta_keyword'] = $company->meta_keyword;
+		$data['meta_description'] = $company->meta_description;
+
+		$data['companyData'] = $company;
+		$categorys = $this->Category_model->getAllFooter();
+		$data['categorys'] = $categorys;
+		
 		
 		// $search = array();
 		// $data['site_lang_name'] = $this->session->userdata('site_lang_name');
@@ -110,10 +124,29 @@ class Promotion extends CI_Controller {
 
 		
 
-		// $this->load->config('pagination',TRUE);		
-		// $config = $this->config->item('pagination');	
+		$this->load->config('pagination',TRUE);		
+		$config = $this->config->item('pagination');	
 
-		// $config["per_page"] = 6;
+		$config["per_page"] = 2;
+
+		$config["base_url"] = base_url()."".$this->session->userdata('site_lang_name')."/Promotion/";
+
+		$config["total_rows"] = $this->Promotion_model->record_count();
+
+		$config["uri_segment"] = 4;
+
+		$config['reuse_query_string'] = true;			
+		$this->pagination->initialize($config);		
+		$data["links"] = $this->pagination->create_links();
+		$data['total_rows'] =  $config["total_rows"];
+
+		$start = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;	
+
+		$promotions = $this->Promotion_model->getAll2($config["per_page"],$start);
+
+		$data["promotions"] = $promotions;
+
+		// print_r($promotions);
 
 		// if ($cat_id != '') {
 

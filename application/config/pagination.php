@@ -8,7 +8,7 @@
 //$config['suffix'] = "?keyword=$keyword&cat_id=$cat_id";
 //$config['page_query_string'] = TRUE;
 
-$config['full_tag_open'] = '<ul class="pagination custom-pagination pagination float-right">';
+$config['full_tag_open'] = '<ul class="pagination custom-pagination ">';
 $config['full_tag_close'] = '</ul>';
 
 $config['first_link'] = 'First';

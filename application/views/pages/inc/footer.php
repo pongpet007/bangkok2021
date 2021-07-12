@@ -51,11 +51,13 @@
 
 						<?
 						foreach ($categorys as $category) {
+							$cname = $category->cat_name;
+							$cname = str_replace(array(':','\\','/',',','.','%20','(',')'),'',$cname);
 							?>
 
 							<div class="col-md-6">
 								<div class="footer-menu-category">
-									<a href="<?=base_url($this->session->userdata('site_lang_name').'/Products?cat_id='.$category->cat_id)?>">
+									<a href="<?=base_url()?><?=$this->session->userdata('site_lang_name')?>/cid:<?=$category->cat_id?>_<?=$cname?>">
 										<img src="<?=base_url()?>images/icon/icon-dropdown arrow-default.png" alt="dropdown">
 										<?=$category->cat_name?>
 									</a>

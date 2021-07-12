@@ -1293,7 +1293,29 @@ p {
 .btn-attach-slip:hover {
 	color: #80090F;
 }
+.custom-pagination {
+	float: right;	
+}
 
+.page-item.active .page-link {
+	background-color: #80090F !important;
+	border-color: #80090F !important;
+}
+.custom-pagination li a {
+	color: #80090F;
+	text-decoration: none;
+}
+.input_brand {
+	background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+	border: 1px solid #d7d7d7;
+	float: left;
+	height: 17px;
+	margin: 3px 12px 0 0;
+	padding-left: 0;
+	width: 17px;
+	cursor: pointer;
+	z-index: 999;
+}
 
 
 

@@ -57,7 +57,12 @@ class Products extends CI_Controller {
 		$search = array();
 		$data["categorys"] = $this->Category_model->getAll();
 
+		// print_r($data["categorys"]);
+
 		$data["brands"] = $this->Brand_model->getAll();
+
+
+		// print_r($data["brands"]);
 
 		$keyword = $this->input->GET('keyword');
 
@@ -69,29 +74,6 @@ class Products extends CI_Controller {
 		if($tag != '') {
 			$search = array('tag'=>$tag);
 		}
-		
-		
-		
-		// // print_r($search);
-		// $company = $this->Company_model->getOne(1);		
-		// $data['companyData'] = $company;
-		// $data['meta_title'] = $company->meta_title;
-		// $data['meta_keyword'] = $company->meta_keyword;
-		// $data['meta_description'] = $company->meta_description;
-		
-		// // $theme_path = $company->theme_path;
-		// // $data['theme_path'] = $theme_path;
-		// // $data["theme_assets_path"] = $company->theme_assets_path;
-
-		// // $menus = $this->Menu_model->getMain();
-		// // // echo $this->db->last_query();
-		// // // exit();
-
-		// // foreach ($menus as $menu) {
-		// // 	$menu->submenu = $this->Menu_model->getsub($menu->menu_id);
-		// // }
-		// // $data['menus'] = $menus ;		
-		// // $data['countrys'] = $this->Country_model->getAll();
 		
 		
 		if(strlen($params)>0 ){
@@ -125,29 +107,60 @@ class Products extends CI_Controller {
 			$countnews =0;
 		}
 
-		// if ($cat_id != '') {
-		// 	$cat_name = $this->Category_model->getOne($cat_id);
-		// }
+		$data["cat_name"] = '';
+		if ($cat_id != '') {
+			$cat_name = $this->Category_model->getOne($cat_id);
+
+			$data["cat_name"] = $cat_name->cat_name;
+			$data["cat_id"] = $cat_name->cat_id;
+			// print_r($data["cat_name"]);
+		}
+
+		if (isset($_SESSION["brand"])) {
+		// 	// print_r($_SESSION["brand"]);
+		// exit();
+			$iss=0;
+			if ($brand_id > 0 ) {
+
+				unset($_SESSION["bid"]);
+				if ( array_key_exists($brand_id ,$_SESSION["brand"]) ){
+					
+
+				}else{
+					$_SESSION["brand"][$brand_id] = $brand_id ;
+					$_SESSION["brandid"][$brand_id] = $brand_id ;
+				}
+				$iss++;
+			}
+		} else {
+			$_SESSION["brand"] = array();
+			$_SESSION["brandid"] = array();
+		}
 
 		
+
+
+		$search['brand_id']= $_SESSION["brand"];
+
+		// print_r($search['brand_id']);
 
 		$this->load->config('pagination',TRUE);		
 		$config = $this->config->item('pagination');	
 
-		$config["per_page"] = 6;
+		$config["per_page"] = 16;
 
-		if ($cat_id != '') {
+		// if ($cat_id != '') {
 
-			$config["base_url"] = base_url() . "".$this->session->userdata('site_lang_name')."/cid:".$cat_id."_".$cat_name->cat_name."";
+		// 	$config["base_url"] = base_url() . "".$this->session->userdata('site_lang_name')."/cid:".$cat_id."_".$cat_name->cat_name."";
 
-		} else if ($brand_id != '') {
+		// } else if ($brand_id != '') {
 
-			$brand_name = $this->Brand_model->getOne($brand_id);
-			$config["base_url"] = base_url() . "".$this->session->userdata('site_lang_name')."/bid:".$brand_id."_".$brand_name->brand_name."";
+		// 	$brand_name = $this->Brand_model->getOne($brand_id);
+		// 	$config["base_url"] = base_url() . "".$this->session->userdata('site_lang_name')."/bid:".$brand_id."_".$brand_name->brand_name."";
 
-		} else {
-			$config["base_url"] = base_url() . "".$this->session->userdata('site_lang_name')."/Products/index/";
-		}
+		// } else {
+		// 	$config["base_url"] = base_url() . "".$this->session->userdata('site_lang_name')."/Products/index/";
+		// }
 		
 		$config["total_rows"] = $this->Products_model->record_count($search);
 
@@ -178,12 +191,16 @@ class Products extends CI_Controller {
 		// print_r($this->db->last_query());
 
 		
-		// $image_group_id = 1;
-		// foreach ($products as $product) { 
-		// 	$product->images = $this->Image_manage_model->getinuseProduct($image_group_id,$product->pro_id);
-		// }
+		$image_group_id = 1;
+		foreach ($products as $product) { 
+			$product->images = $this->Image_manage_model->getinuseProduct($image_group_id,$product->pro_id);
+		}
 
-		// $data['products'] = $products;
+		$data['products'] = $products;
+
+		
+
+		// print_r($products);
 		
 		// $tags_all = $this->Products_model->getProductsTag();
 

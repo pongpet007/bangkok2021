@@ -5,18 +5,25 @@ class Products_model extends CI_Model{
 	public function getAll($limit, $start,$search = array() , $orderby='')
 	{
 
-		// $this->db->select('products.*,products_language.*,cat_name');
+		$this->db->select('products.*,products_language.*,company_category_language.cat_name,company_brand_language.brand_name');
 		$this->db->from('products');
 		$this->db->join('products_language','products.pro_id = products_language.pro_id ','left');
 		$this->db->join('company_category','products.cat_id=company_category.cat_id','left');
 		$this->db->join('company_category_language','company_category.cat_id = company_category_language.cat_id ','left');
+		$this->db->join('company_brand_language','products.brand_id = company_brand_language.brand_id ','left');
 		if(isset($search['tag']) && $search['tag']!=''){
 			$this->db->join('product_tag','product_tag.pro_id=products.pro_id','left');
 			$this->db->join('product_tag_data','product_tag_data.pro_tags_id=product_tag.pro_tags_id','left');
 		}
 
-		if(isset($search['brand_id']) and ($search['brand_id']) > 0 ){
-			$this->db->where('products.brand_id', $search['brand_id']);					
+		// if(isset($search['brand_id']) and ($search['brand_id']) > 0 ){
+		// 	$this->db->where('products.brand_id', $search['brand_id']);					
+		// }
+
+		if(isset($search['brand_id']) and count($search['brand_id']) > 0 ){
+			if(count($search['brand_id']) > 0) {
+				$this->db->where_in('products.brand_id', $search['brand_id']);
+			}
 		}
 
 		if(isset($search['keyword'])){
@@ -97,9 +104,9 @@ class Products_model extends CI_Model{
 		->join('company_category','products.cat_id=company_category.cat_id','left')
 		->join('company_category_language','company_category.cat_id = company_category_language.cat_id ','left');
 
-		if(isset($search['brand_id']) and count($search['brand_id']) > 0 ){
-			$this->db->where_in('products.brand_id', $search['brand_id']);					
-		}
+		// if(isset($search['brand_id']) and count($search['brand_id']) > 0 ){
+		// 	$this->db->where_in('products.brand_id', $search['brand_id']);					
+		// }
 
 		if(isset($search['keyword'])){
 			$this->db->like('products_language.pro_name', $search['keyword']);		
@@ -161,8 +168,10 @@ class Products_model extends CI_Model{
 			$this->db->like('pro_name', $search['keyword']);
 		}
 
-		if(isset($search['brand_id']) and ($search['brand_id']) > 0 ){
-			$this->db->where_in('products.brand_id', $search['brand_id']);					
+		if(isset($search['brand_id']) and count($search['brand_id']) > 0 ){
+			if(count($search['brand_id']) > 0) {
+				$this->db->where_in('products.brand_id', $search['brand_id']);
+			}
 		}
 
 		if(isset($search['tag']) && $search['tag']!=''){
