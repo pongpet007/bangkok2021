@@ -115,10 +115,10 @@
 								<?
 								if ($this->session->userdata("site_lang_name") == $country->iso2) {
 									?>
-									<a href="<?=base_url($uri)?>"  class="dropbtn-online">
+									<div href="<?=base_url($uri)?>"  class="dropbtn-online">
 										<img src="<?=base_url()?>images/country_flags/<?=$country->iso2?>.png">
 										<?   echo $country->iso2; ?>
-									</a>
+									</div>
 
 									
 								<?   } else {   ?>

@@ -58,6 +58,36 @@ class Products_model extends CI_Model{
 	}
 
 
+
+	public function getAllIndex()
+	{
+
+		// $this->db->select('products.*,products_language.*,cat_name');
+		$this->db->from('products');
+		$this->db->join('products_language','products.pro_id = products_language.pro_id ','left');
+		$this->db->join('company_category','products.cat_id=company_category.cat_id','left');
+		$this->db->join('company_category_language','company_category.cat_id = company_category_language.cat_id ','left');
+		
+		
+		if($this->session->userdata('site_lang')){
+			$this->db->where('products_language.country_id', $this->session->userdata('site_lang'));
+			$this->db->where('company_category_language.country_id', $this->session->userdata('site_lang'));
+		}
+		else{
+			$this->db->where('products_language.country_id', '221');
+			$this->db->where('company_category_language.country_id', '221');
+		}
+
+		// $this->db->limit($limit, $start);	
+
+		$this->db->order_by('products.pro_id','desc');
+
+		$query = $this->db->get();
+		return $query->result();
+	}
+
+
+
 	public function getAll2($limit, $start,$search = array() , $orderby='')
 	{
 

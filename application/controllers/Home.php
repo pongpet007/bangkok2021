@@ -48,33 +48,63 @@ class Home extends CI_Controller {
 		$data["lang"] = $lang;
 
 
-		// $companyData = $this->Company_model->getComContact();
-		// $company = $this->Company_model->getOne(1);
+		// ----------------------------- Need ----------------------------- 
 
-		// $data['meta_title'] = $company->meta_title;
-		// $data['meta_keyword'] = $company->meta_keyword;
-		// $data['meta_description'] = $company->meta_description;
+		$companyData = $this->Company_model->getComContact();
+		$company = $this->Company_model->getOne(1);
 
-		// $data['companyData'] = $companyData;
+		$data['meta_title'] = $company->meta_title;
+		$data['meta_keyword'] = $company->meta_keyword;
+		$data['meta_description'] = $company->meta_description;
+
+		$data['companyData'] = $company;
+		$categorys = $this->Category_model->getAllFooter();
+		$data['categorys'] = $categorys;
+
+
 		
-		// $historys = $this->Company_model->getHistory();
 
-		// // print_r($this->db->last_query());
-		// // print_r($historys);
 
-		// $data['historys'] = $historys;
+		$data["promotions"] = $this->Company_model->getPromotionIndex();
 
-		// $comVision = $this->Company_model->getOne('1');
+		$data["portfolios"] = $this->Company_model->getPortfolioIndex();
 
-		// $data['visions'] =  $comVision;
+		$news = $this->News_model->getAllIndex();
+		$image_group_id = 3;
+		foreach ($news as $new) { 
+			$new->images = $this->Image_manage_model->getinuseProduct($image_group_id,$new->news_id);
+		}
+		$data["news"]= $news;
+		// print_r($news);
 
-		// $com_groups = $this->Company_model->getGroupCom();
-		// // print_r($com_groups);
-		// $data['com_groups'] = $com_groups;
+		$blogs = $this->Blog_model->getAllIndex();
+		$image_group_id = 2;
+		foreach ($blogs as $blog) { 
+			$blog->images = $this->Image_manage_model->getinuseProduct($image_group_id,$blog->blog_id);
+		}
 
-		// $categorys = $this->Category_model->getAll();
+		$data["blogs"] = $blogs;
+		// print_r($blogs);
+		// print_r($this->db->last_query());
 
-		// $data['categorys'] = $categorys;
+		
+		$products = $this->Products_model->getAllIndex();
+		// print_r($this->db->last_query());
+		
+		$image_group_id = 1;
+		foreach ($products as $product) { 
+			$product->images = $this->Image_manage_model->getinuseProduct($image_group_id,$product->pro_id);
+		}
+
+		// print_r($this->db->last_query());
+		// print_r($products);
+		$data['products'] = $products;
+
+
+		$data["services"] = $this->Company_model->getServiceAll();
+
+
+		
 
 		// $blogall = $this->Blog_model->getAll();
 		// $image_group_id = 2;

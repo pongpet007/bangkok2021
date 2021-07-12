@@ -24,6 +24,33 @@ class Category_model extends CI_Model{
 		return $query->result();
 
 	}
+
+
+	public function getAllFooter(){
+
+		
+		$this->db->from('company_category')
+				 ->join('company_category_language','company_category.cat_id = company_category_language.cat_id ','left');
+		
+		$this->db->where('cat_ref', 0);
+
+		$this->db->where('is_show', 1);
+
+		if($this->session->userdata('site_lang')){
+			$this->db->where('company_category_language.country_id', $this->session->userdata('site_lang'));
+		}
+		else{
+			$this->db->where('company_category_language.country_id', '221');
+		}
+
+		$this->db->limit('16');
+
+		$this->db->order_by('company_category.orders' ,'asc');
+		$query = $this->db->get();
+
+		return $query->result();
+
+	}
 	
 	public function getSub($cat_id=0)
 	{

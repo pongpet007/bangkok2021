@@ -9,7 +9,7 @@
 							<?=lang("address")?>
 						</h5>
 						<p>
-							33-35 ซอย บางนา-ตราด 12 แขวง บางนาใต้ เขต บางนา ถนน บางนา กรุงเทพฯ 10260
+							<?=$companyData->com_address?>
 						</p>
 					</div>
 					<div class="tab-left-footer">
@@ -17,7 +17,7 @@
 							<?=lang("email")?>
 						</h5>
 						<p>
-							bangkokabsolute@gmail.com
+							<?=$companyData->com_email?>
 						</p>
 					</div>
 					<div class="tab-left-footer">
@@ -25,7 +25,7 @@
 							<?=lang("tel")?>
 						</h5>
 						<p>
-							02-398-3389(-92)
+							<?=$companyData->com_phone?>
 						</p>
 					</div >
 					<div class="tab-left-footer">
@@ -33,7 +33,7 @@
 							<?=lang("fax")?>
 						</h5>
 						<p>
-							02-115-9921
+							<?=$companyData->com_fax?>
 						</p>
 					</div>
 
@@ -47,118 +47,28 @@
 					</p>
 					<img src="<?=base_url()?>images/line-footer.png">
 					<div class="row">
-						<div class="col-md-6">
-							<div class="footer-menu-category">
-								<a href="#">
-									<img src="<?=base_url()?>images/icon/icon-dropdown arrow-default.png" alt="dropdown">
-									AIR CIRCUIT BREAKDERS
-								</a>
+
+
+						<?
+						foreach ($categorys as $category) {
+							?>
+
+							<div class="col-md-6">
+								<div class="footer-menu-category">
+									<a href="<?=base_url($this->session->userdata('site_lang_name').'/Products?cat_id='.$category->cat_id)?>">
+										<img src="<?=base_url()?>images/icon/icon-dropdown arrow-default.png" alt="dropdown">
+										<?=$category->cat_name?>
+									</a>
+								</div>
 							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="footer-menu-category">
-								<a href="#">
-									<img src="<?=base_url()?>images/icon/icon-dropdown arrow-default.png" alt="dropdown">
-									AIR CIRCUIT BREAKDERS
-								</a>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="footer-menu-category">
-								<a href="#">
-									<img src="<?=base_url()?>images/icon/icon-dropdown arrow-default.png" alt="dropdown">
-									MOULDED CASE CIRCUIT BREAKERS
-								</a>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="footer-menu-category">
-								<a href="#">
-									<img src="<?=base_url()?>images/icon/icon-dropdown arrow-default.png" alt="dropdown">
-									AIR CIRCUIT BREAKDERS
-								</a>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="footer-menu-category">
-								<a href="#">
-									<img src="<?=base_url()?>images/icon/icon-dropdown arrow-default.png" alt="dropdown">
-									AIR CIRCUIT BREAKDERS
-								</a>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="footer-menu-category">
-								<a href="#">
-									<img src="<?=base_url()?>images/icon/icon-dropdown arrow-default.png" alt="dropdown">
-									AIR CIRCUIT BREAKDERS
-								</a>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="footer-menu-category">
-								<a href="#">
-									<img src="<?=base_url()?>images/icon/icon-dropdown arrow-default.png" alt="dropdown">
-									AIR CIRCUIT BREAKDERS
-								</a>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="footer-menu-category">
-								<a href="#">
-									<img src="<?=base_url()?>images/icon/icon-dropdown arrow-default.png" alt="dropdown">
-									AIR CIRCUIT BREAKDERS
-								</a>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="footer-menu-category">
-								<a href="#">
-									<img src="<?=base_url()?>images/icon/icon-dropdown arrow-default.png" alt="dropdown">
-									AIR CIRCUIT BREAKDERS
-								</a>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="footer-menu-category">
-								<a href="#">
-									<img src="<?=base_url()?>images/icon/icon-dropdown arrow-default.png" alt="dropdown">
-									AIR CIRCUIT BREAKDERS
-								</a>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="footer-menu-category">
-								<a href="#">
-									<img src="<?=base_url()?>images/icon/icon-dropdown arrow-default.png" alt="dropdown">
-									AIR CIRCUIT BREAKDERS
-								</a>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="footer-menu-category">
-								<a href="#">
-									<img src="<?=base_url()?>images/icon/icon-dropdown arrow-default.png" alt="dropdown">
-									AIR CIRCUIT BREAKDERS
-								</a>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="footer-menu-category">
-								<a href="#">
-									<img src="<?=base_url()?>images/icon/icon-dropdown arrow-default.png" alt="dropdown">
-									AIR CIRCUIT BREAKDERS
-								</a>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="footer-menu-category">
-								<a href="#">
-									<img src="<?=base_url()?>images/icon/icon-dropdown arrow-default.png" alt="dropdown">
-									AIR CIRCUIT BREAKDERS
-								</a>
-							</div>
-						</div>
+
+							<?
+						}
+						?>
+
+
+
+
 					</div>
 					
 				</div>

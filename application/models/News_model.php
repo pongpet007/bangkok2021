@@ -24,6 +24,28 @@ class News_model extends CI_Model{
 
 	}
 
+	public function getAllIndex()
+	{
+		$this->db->from('news')
+				 ->join('news_language','news.news_id =  news_language.news_id','left');
+
+		$this->db->where('is_active',1);
+		$this->db->order_by('news.pos_index','asc');	
+	
+		$this->db->limit(2);	
+		if($this->session->userdata('site_lang')){
+			$this->db->where('news_language.country_id', $this->session->userdata('site_lang'));			
+		}
+		else{
+			$this->db->where('news_language.country_id', '221');
+		}
+
+		$query = $this->db->get();
+
+		return $query->result();
+
+	}
+
 
 	public function getRelate($start,$limit,$news_id)
 	{

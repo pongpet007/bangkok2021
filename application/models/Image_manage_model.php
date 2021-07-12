@@ -23,12 +23,13 @@ class Image_manage_model extends CI_Model{
 
 	public function getinuseProduct($image_group_id,$id)
 	{
+		$this->db->from('image_manage')
+				 ->join('image_group','image_group.image_group_id=image_manage.image_group_id','left');
 		$this->db->where('image_manage.image_group_id',$image_group_id);
 		$this->db->where('image_manage.id',$id);
 		// $this->db->where('image_manage.set_picture_main',1);
 		$this->db->order_by('image_manage.set_picture_main asc');
-		$this->db->from('image_manage')
-				 ->join('image_group','image_group.image_group_id=image_manage.image_group_id','left');
+		
 		$result = $this->db->get();
 
 		return $result->result();

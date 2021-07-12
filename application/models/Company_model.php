@@ -73,6 +73,48 @@ class Company_model extends CI_Model{
 		return $query->result();
 	}
 
+
+	public function getPromotionIndex() {
+		$this->db->from('company_promotion');
+
+		$this->db->where('is_active = 1');
+
+		$this->db->order_by("position_index",'asc');
+
+		$query = $this->db->get();
+		return $query->result();
+
+
+	}
+
+	public function getPortfolioIndex() {
+		$this->db->from('company_portfolio');
+
+		$this->db->where('is_active = 1');
+
+		$this->db->order_by("position_index",'asc');
+
+		$query = $this->db->get();
+		return $query->result();
+
+
+	}
+
+
+	public function getServiceAll() {
+		$this->db->from('company_proandser');
+
+		$this->db->where('is_active = 1');
+		$this->db->where('service_name_img != ','');
+
+		$this->db->order_by("position",'asc');
+
+		$query = $this->db->get();
+		return $query->result();
+
+
+	}
+
 	public function getComContact() {
 
 		$this->db->from('company');

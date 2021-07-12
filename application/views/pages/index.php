@@ -87,28 +87,24 @@
 					</div>
 				</div>
 				<div class="col-lg-6 col-md-6 col-sm-6 col-12">
-					<div class="banner-1" style="">
-						
-					</div>
+					<img src="<?=base_url()?>images/banner/banner-large-1.png" class="img-width-100" alt="">
 				</div>
 				<div class="col-lg-6 col-md-6 col-sm-6 col-12">
-					<div class="banner-2" style="">
-						
-					</div>
+					<img src="<?=base_url()?>images/banner/banner-large-2.png" class="img-width-100" alt="">
 				</div>
 			</div>
 			<div class="row" style="margin: 20px 0">
 				<div class="col-md-3 col-6">
-					<img src="<?=base_url()?>images/logo/link-american-standard.png" class="img-width-100">
+					<img src="<?=base_url()?>images/banner/banner-small-1.png" class="img-width-100" alt="">
 				</div>
 				<div class="col-md-3 col-6">
-					<img src="<?=base_url()?>images/logo/link-american-standard.png" class="img-width-100">
+					<img src="<?=base_url()?>images/banner/banner-small-2.png" class="img-width-100" alt="">
 				</div>
 				<div class="col-md-3 col-6">
-					<img src="<?=base_url()?>images/logo/link-american-standard.png" class="img-width-100">
+					<img src="<?=base_url()?>images/banner/banner-small-3.png" class="img-width-100" alt="">
 				</div>
 				<div class="col-md-3 col-6">
-					<img src="<?=base_url()?>images/logo/link-american-standard.png" class="img-width-100">
+					<img src="<?=base_url()?>images/banner/banner-small-4.png" class="img-width-100" alt="">
 				</div>
 			</div>
 			<!-- *************** Promotion *************** -->
@@ -131,21 +127,21 @@
 			<div class="row">
 				<div class="col-md-12" style="margin: 50px 0;">
 					<div class="owl-carousel owl-carousel-promotion">
-						<div class="item">
-							<a href="#">
-								<img src="<?=base_url()?>images/banner/banner-1.png"  class="img-width-100">
-							</a>
-						</div>
-						<div class="item">
-							<a href="#">
-								<img src="<?=base_url()?>images/banner/banner-2.png"  class="img-width-100">
-							</a>
-						</div>
-						<div class="item">
-							<a href="#">
-								<h2>Swipe</h2>
-							</a>
-						</div>
+						
+						<? foreach ($promotions as $promotion) { ?>
+
+
+							<div class="item">
+								<a href="<?=base_url($this->session->userdata('site_lang_name'))?>/Promotion">
+									<img src="<?=base_url()?>images/promotion/<?=$promotion->promotion_name_img?>"  class="img-width-100">
+								</a>
+							</div>
+
+							<?
+						}
+						?>
+						
+
 					</div>
 				</div>
 			</div>
@@ -169,32 +165,25 @@
 			<div class="row">
 				<div class="col-md-12" style="margin: 50px 0;">
 					<div class="owl-carousel owl-carousel-port">
-						<div class="item">
-							<a href="#">
-								<img src="<?=base_url()?>images/port/port-1.png">
-							</a>
-						</div>
-						<div class="item">
-							<a href="#">
-								<img src="<?=base_url()?>images/port/port-2.png">
-							</a>
-						</div>
-						<div class="item">
-							<a href="#">
-								<img src="<?=base_url()?>images/port/port-3.png">
-							</a>
-						</div>
-						<div class="item">
-							<a href="#">
-								<img src="<?=base_url()?>images/port/port-4.png">
-							</a>
-						</div>
+
+						<? foreach ($portfolios as $port) { 
+							// $filepath = base_url().'../images/port/'.$port->portfolio_name_img;
+							?>
+							<div class="item">
+								<a href="<?=base_url($this->session->userdata('site_lang_name'))?>/Achievements/detail/<?=$port->portfolio_id?>">
+									<img src="<?=base_url()?>images/port/<?=$port->portfolio_name_img?>"class="img-width-100">
+								</a>
+							</div>
+							<?
+						}
+						?>
+
 					</div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-3">
-					
+
 				</div>
 				<div class="col-md-6">
 					<div class="font-title" >
@@ -205,72 +194,58 @@
 					</div>
 				</div>
 				<div class="col-md-3">
-					
+
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-12" style="margin: 50px 0;">
 					<div class="owl-carousel owl-carousel-products">
-						<div class="item">
-							<a href="#">
-								<img src="<?=base_url()?>images/products/pro-1.png">
-							</a>
-							<div style="margin: 40px 0;">
-								<a href="#" class="name-product">
-									AIR CIRCUIT BREAKDERS
+
+
+						<?foreach ($services as $service) { ?>
+
+							<div class="item">
+
+
+								
+
+								<?
+									// $pathfileservice = '../images/service/'.$service->service_name_img;
+									// echo $pathfileservice;
+									// if(is_file($pathfileservice)) {
+									// 	echo "<img src=".$pathfileservice."> ";
+									// }
+								if($service->service_name_img != ''){
+									?>
+									<img src="<?=base_url()?>images/service/<?=$service->service_name_img?>" class="img-width-100">
+									<?
+								}
+								?>
+
+
+								<!-- <img src="<?=base_url()?>images/products/pro-1.png"> -->
+
+								<div style="margin: 40px 0;">
+									<a href="<?=$service->link_external?>" class="name-product">
+										<?=$service->service_name?>
+									</a>
+								</div>
+								<div class="pro-about">
+									<?=$service->service_description?>
+								</div>
+								<a href="<?=$service->link_external?>" class="btn btn-go-ptoduct">
+									<div class="about-btn">
+										<img src="<?=base_url()?>images/icon/box-arrow-in-right.png" class="icon-right-products">
+										<?=lang("see-more")?>
+									</div>
 								</a>
 							</div>
-							<p class="pro-about">
-								“เราเป็นผู้นำด้านการจัดจำหน่าย สินค้าระบบแรงดันต่ำภายใต้แบรนด์ ABB” เรื่องสินค้า Low Voltage ต้องยก ให้เรา ด้วยประสบการณ์การขาย สินค้า Low Voltage กว่า 50 ล้านชิ้น ท่านจึงมั่นใจได้ว่า คุณภาพสินค้า และบริการหลังการขาย ของเราเหนือชั้นเกินใคร การันตีจากความประทับใจของลูกค้ามากมายที่ทางบริษัทได้รับเกียรติให้เป็นผู้ดูแลอย่างสม่ำเสมอ
-							</p>
-							<a href="#" class="btn btn-go-ptoduct">
-								<div class="about-btn">
-									<img src="<?=base_url()?>images/icon/box-arrow-in-right.png" class="icon-right-products">
-									<?=lang("see-more")?>
-								</div>
-							</a>
-						</div>
-						<div class="item">
-							<a href="#">
-								<img src="<?=base_url()?>images/products/pro-2.png">
-							</a>
-							<div style="margin: 40px 0;">
-								<a href="#" class="name-product">
-									POWER METER & ENERGY
-								</a>
-							</div>
-							<p class="pro-about">
-								เทคโนโลยีอัจฉริยะ(Innovation) ได้เข้ามามีบทบาทสำคัญในอุตสาหกรรมไฟฟ้า ก่อเกิดผลิตภัณฑ์ล้ำสมัยมากมาย
-								ที่บริษัทของเราไม่หยุดนิ่ง พร้อมจะนำเทคโนโลยีล้ำสมัย มานำเสนอให้ลูกค้าก่อนใคร ไม่ว่าจะเป็น EV Charger, 
-								อุปกรณ์แผงโซล่า, แผงควบคุมอัจริยะ และอื่นๆ ที่จะช่วยเพิ่ม ความสะดวกสบายและประสิทธิภาพในการทำงาน มองหา ผลิตภัณฑ์ Innovation ไว้ใจให้เราดูแล
-							</p>
-							<a href="#" class="btn btn-go-ptoduct">
-								<div class="about-btn">
-									<img src="<?=base_url()?>images/icon/box-arrow-in-right.png" class="icon-right-products">
-									<?=lang("see-more")?>
-								</div>
-							</a>
-						</div>
-						<div class="item">
-							<a href="#">
-								<img src="<?=base_url()?>images/products/pro-3.png">
-							</a>
-							<div style="margin: 40px 0;">
-								<a href="#" class="name-product">
-									INDUSTRIAL PLUGS AND SOCKERS
-								</a>
-							</div>
-							<p class="pro-about">
-								บริษัทเรานำเสนอสายไฟและสายเคเบิ้ล คุณภาพสูงนานาชนิดที่ผลิตและส่งตรงจาก บริษัทบางกอก เคเบิ้ล จำกัด 
-								ซึ่งเป็นบริษัทผลิตสายไฟชั้นแนวหน้าในประเทศไทย ด้วยคุณภาพของสายไฟที่ดีเยี่ยมและหลากหลาย ทำให้เราเลือกนำเสนอสายไฟ บางกอกเคเบิ้ลแก่ลูกค้า
-							</p>
-							<a href="#" class="btn btn-go-ptoduct">
-								<div class="about-btn">
-									<img src="<?=base_url()?>images/icon/box-arrow-in-right.png" class="icon-right-products">
-									<?=lang("see-more")?>
-								</div>
-							</a>
-						</div>
+							<?
+						}
+						?>
+
+
+
 					</div>
 				</div>
 			</div>
@@ -283,49 +258,43 @@
 						<img src="<?=base_url()?>images/line-bottom-left.png"  class="img-width-100">
 					</div>
 					<div class="row">
-						<div class="col-md-12 space-know">
-							<div class="row">
-								<div class="col-md-6 ">
-									<img src="<?=base_url()?>images/knowledge/know-1.png" class="img-width-100">
-								</div>
-								<div class="col-md-6">
-									<a href="#" class="know-name">
-										Title Name
-									</a>
-									<p class="know-about">
-										Lorem Ipsum is simply dummy text of the printing and typesetting indus
-									</p>
-									<a href="#" class="btn btn-know">
-										<div class="about-btn">
-											<img src="<?=base_url()?>images/icon/box-arrow-in-right.png" class="icon-right-products">
-											<?=lang("see-more")?>
-										</div>
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-12 space-know">
-							<div class="row">
-								<div class="col-md-6">
-									<img src="<?=base_url()?>images/knowledge/know-2.png" class="img-width-100">
-								</div>
-								<div class="col-md-6">
-									<a href="#" class="know-name">
-										Title Name
-									</a>
-									<p class="know-about">
-										Lorem Ipsum is simply dummy text of the printing and typesetting indus
-									</p>
-									<a href="#" class="btn btn-know">
-										<div class="about-btn">
-											<img src="<?=base_url()?>images/icon/box-arrow-in-right.png" class="icon-right-products">
-											<?=lang("see-more")?>
-										</div>
-									</a>
+
+						<? foreach ($blogs as $blog ) { ?>
+
+
+							<div class="col-md-12 space-know">
+								<div class="row">
+									<div class="col-md-6 ">
+
+										<? foreach ($blog->images as $key => $images) { ?>
+											<? if ($key==0) { ?>
+												<img class="img-width-100" src="<?=base_url()?>images/website/<?=$images->filename?>_414.<?=$images->extension?>" alt="<?=$blog->blog_name?>">
+											<? } ?>
+										<? } ?>
+
+									</div>
+									<div class="col-md-6">
+										<a href="<?=base_url($this->session->userdata('site_lang_name'))?>/Blog/detail/<?=$blog->blog_id?>" class="know-name">
+											<?=$blog->blog_name?>
+										</a>
+										<p class="know-about">
+											<?=$blog->blog_desc_short?>
+										</p>
+										<a href="<?=base_url($this->session->userdata('site_lang_name'))?>/Blog/detail/<?=$blog->blog_id?>" class="btn btn-know">
+											<div class="about-btn">
+												<img src="<?=base_url()?>images/icon/box-arrow-in-right.png" class="icon-right-products">
+												<?=lang("see-more")?>
+											</div>
+										</a>
+									</div>
 								</div>
 							</div>
-						</div>
-						
+
+							<?	
+						}
+						?>
+
+
 					</div>
 				</div>
 				<div class="col-md-6">
@@ -336,40 +305,42 @@
 						<img src="<?=base_url()?>images/line-bottom-left.png"  class="img-width-100">
 					</div>
 					<div class="row">
-						<div class="col-md-6 space-know">
-							<img src="<?=base_url()?>images/news/news-1.png" class="img-width-100">
-							<a href="#" class="news-name">
-								<div style="margin: 20px 0;">
-									Title Name
+
+						<?foreach ($news as $new) { ?>
+							
+
+
+							<div class="col-md-6 space-know">
+
+								<? foreach ($new->images as $key => $images) { ?>
+									<? if ($key==0) { ?>
+										<img class="img-width-100" src="<?=base_url()?>images/website/<?=$images->filename?>_303.<?=$images->extension?>" alt="<?=$blog->blog_name?>">
+									<? } ?>
+								<? } ?>
+
+							
+								<a href="<?=base_url($this->session->userdata('site_lang_name').'/News/detail/'.$new->news_id)?>" class="news-name">
+									<div style="margin: 20px 0;">
+										<?=$new->news_name?>
+									</div>
+								</a>
+								<div class="news-about">
+									<?=$new->news_desc_short?>
 								</div>
-							</a>
-							<p class="news-about">
-								Lorem Ipsum is simply dummy text of the printing and typesetting indus
-							</p>
-							<a href="#" class="btn btn-know">
-								<div class="about-btn">
-									<img src="<?=base_url()?>images/icon/box-arrow-in-right.png" class="icon-right-products">
-									<?=lang("see-more")?>
-								</div>
-							</a>
-						</div>
-						<div class="col-md-6 space-know">
-							<img src="<?=base_url()?>images/news/news-2.png" class="img-width-100">
-							<a href="#" class="news-name">
-								<div style="margin: 20px 0;">
-									Title Name
-								</div>
-							</a>
-							<p class="news-about">
-								Lorem Ipsum is simply dummy text of the printing and typesetting indus
-							</p>
-							<a href="#" class="btn btn-know">
-								<div class="about-btn">
-									<img src="<?=base_url()?>images/icon/box-arrow-in-right.png" class="icon-right-products">
-									<?=lang("see-more")?>
-								</div>
-							</a>
-						</div>
+								<a href="<?=base_url($this->session->userdata('site_lang_name').'/News/detail/'.$new->news_id)?>" class="btn btn-know">
+									<div class="about-btn">
+										<img src="<?=base_url()?>images/icon/box-arrow-in-right.png" class="icon-right-products">
+										<?=lang("see-more")?>
+									</div>
+								</a>
+							</div>
+
+							<?
+						}
+						?>
+
+						
+
 					</div>
 				</div>
 			</div>
@@ -379,7 +350,7 @@
 
 	<style type="text/css">
 	.section-header {
-		
+
 		background-size: 100% auto;
 		height: 958px; 
 		background-repeat: no-repeat;
